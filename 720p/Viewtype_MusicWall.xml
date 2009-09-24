@@ -1,0 +1,180 @@
+<!--Alaska-->
+
+<includes>
+
+	<include name="Object_PicturePanel">
+		<control type="image">
+			<posx>1</posx>
+			<posy>1</posy>
+			<width>108</width>
+			<height>108</height>
+			<texture>pics/picturepanel.png</texture>
+		</control>
+	</include>
+	
+	<include name="Object_PictureIconVars">
+		<posx>5</posx>
+		<posy>5</posy>
+		<width>100</width>
+		<height>100</height>
+		<fadetime>200</fadetime>					
+		<texture>$INFO[ListItem.Icon]</texture>
+		<aspectratio>scale</aspectratio>	
+	</include>
+
+	<include name="Viewtype_MusicWall">
+
+<!-- Browser -->
+	
+		<control type="panel" id="50">
+			<viewtype label="Wall">icon</viewtype>
+			<posx>-30</posx>
+			<posy>195</posy>
+			<width>1338</width>
+			<height>669</height>
+			<pagecontrol>61</pagecontrol>
+			<scrolltime>0</scrolltime>
+			<orientation>horizontal</orientation>
+			<onup>7000</onup>
+			<ondown>7000</ondown>
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_MusicWallFloat</include>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_HiddenByMusicInfo</include>
+			<itemlayout width="223" height="223">
+				<control type="image">
+					<posx>17</posx>
+					<posy>17</posy>
+					<width>190</width>
+					<height>190</height>
+					<texture>wall/musicwallmatte.png</texture>
+				</control>
+				<control type="image">
+					<posx>17</posx>
+					<posy>17</posy>
+					<width>190</width>
+					<height>190</height>
+					<fadetime>200</fadetime>
+					<texture diffuse="wall/musicwallmatte.png">$INFO[ListItem.Icon]</texture>
+					<colordiffuse>48FFFFFF</colordiffuse>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+				</control>
+				<control type="image">
+					<posx>16</posx>
+					<posy>16</posy>
+					<width>192</width>
+					<height>192</height>
+					<texture>wall/musicwallframeNF.png</texture>
+					<colordiffuse>48FFFFFF</colordiffuse>					
+				</control>				
+			</itemlayout>
+			<focusedlayout width="223" height="223">
+				<control type="image">
+					<posx>17</posx>
+					<posy>17</posy>
+					<width>190</width>
+					<height>190</height>
+					<texture>wall/musicwallmatte.png</texture>
+					<animation type="Focus" reversible="false" condition="Container(50).Row(0)">
+						<effect type="slide" start="0,0" end="0,-20" time="400" tween="back" easing="out" />						
+					</animation>
+					<animation type="Focus" reversible="false" condition="Container(50).Row(2)">
+						<effect type="slide" start="0,0" end="0,20" time="400" tween="back" easing="out" />						
+					</animation>					
+				</control>
+				<control type="image">
+					<posx>17</posx>
+					<posy>17</posy>
+					<width>190</width>
+					<height>190</height>
+					<fadetime>200</fadetime>
+					<texture diffuse="wall/musicwallmatte.png">$INFO[ListItem.Icon]</texture>
+					<animation type="Focus" reversible="false" condition="Container(50).Row(0)">
+						<effect type="fade" start="20" end="100" time="200" />
+						<effect type="slide" start="0,0" end="0,-20" time="400" tween="back" easing="out" />						
+					</animation>
+					<animation type="Focus" reversible="false" condition="Container(50).Row(1)">
+						<effect type="fade" start="20" end="100" time="200" />	
+					</animation>					
+					<animation type="Focus" reversible="false" condition="Container(50).Row(2)">
+						<effect type="fade" start="20" end="100" time="200" />
+						<effect type="slide" start="0,0" end="0,20" time="400" tween="back" easing="out" />						
+					</animation>	
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+				</control>
+				<control type="image">
+					<posx>17</posx>
+					<posy>17</posy>
+					<width>190</width>
+					<height>190</height>
+					<texture>wall/musicwallframeNF.png</texture>
+					<colordiffuse>48FFFFFF</colordiffuse>
+					<animation type="Focus" reversible="false" condition="Container(50).Row(0)">
+						<effect type="fade" start="100" end="0" time="200" />
+						<effect type="slide" start="0,0" end="0,-20" time="400" tween="back" easing="out" />						
+					</animation>
+					<animation type="Focus" reversible="false" condition="Container(50).Row(1)">
+						<effect type="fade" start="100" end="0" time="200" />					
+					</animation>					
+					<animation type="Focus" reversible="false" condition="Container(50).Row(2)">
+						<effect type="fade" start="100" end="0" time="200" />
+						<effect type="slide" start="0,0" end="0,20" time="400" tween="back" easing="out" />						
+					</animation>						
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>223</width>
+					<height>223</height>
+					<texture>wall/musicwallframeF.png</texture>
+					<animation type="Focus" reversible="false" condition="Container(50).Row(0)">
+						<effect type="fade" start="0" end="100" time="400" />
+						<effect type="slide" start="0,0" end="0,-20" time="400" tween="back" easing="out" />
+					</animation>
+					<animation type="Focus" reversible="false" condition="Container(50).Row(1)">
+						<effect type="fade" start="0" end="100" time="400" />
+					</animation>							
+					<animation type="Focus" reversible="false" condition="Container(50).Row(2)">
+						<effect type="fade" start="0" end="100" time="400" />
+						<effect type="slide" start="0,0" end="0,20" time="400" tween="back" easing="out" />
+					</animation>						
+				</control>				
+			</focusedlayout>
+		</control>
+
+		<control type="image">
+			<posx>-67</posx>
+			<posy>516</posy>
+			<width>27</width>
+			<height>27</height>
+			<visible>Control.IsVisible(50)</visible>
+			<texture flipx="true">pics/picsarrow.png</texture>
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_MusicWallFloat</include>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_HiddenByMusicInfo</include>
+		</control>
+		
+		<control type="image">
+			<posx>1318</posx>
+			<posy>516</posy>
+			<width>27</width>
+			<height>27</height>
+			<visible>Control.IsVisible(50)</visible>
+			<texture>pics/picsarrow.png</texture>
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_MusicWallFloat</include>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_HiddenByMusicInfo</include>
+		</control>		
+		
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture diffuse="wall/music_wall_mask.png">filter.png</texture>
+			<visible>Control.IsVisible(50)</visible>
+			<colordiffuse>dfFFFFFF</colordiffuse>
+		</control>
+		
+	</include>
+
+</includes>

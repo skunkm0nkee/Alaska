@@ -1,0 +1,69 @@
+<colors>
+
+<!-- Base colours -->
+
+	<color name="Black">FF262626</color>
+	<color name="Grey">bbffffff</color>
+	<color name="Red">FFFF0000</color>
+
+<!-- Global colours -->
+
+	<color name="Time">bbffffff</color>
+	<color name="Date">ccb10000</color>
+	<color name="RSSBody">bbffffff</color>
+	<color name="RSSHighlight">bbffffff</color>
+	<color name="RSSHeadline">bbffffff</color>
+	<color name="RSSTitle">bbffffff</color>
+	<color name="NowPlayingArtist">bbffffff</color>
+	<color name="NowPlayingAlbum">ccb10000</color>
+	<color name="NowPlayingTrack">66ffffff</color>
+	<color name="MediaMenu">99ffffff</color>
+
+<!-- OSD -->
+	<color name="OSDPlayingArtist">ccffffff</color>
+	<color name="OSDPlayingTrack">ccffffff</color>
+	<color name="OSDPlayingAlbum">ccb10000</color>
+	<color name="OSDPlayingPN">aab10000</color>
+	<color name="OSDDetails">bbffffff</color>
+	<color name="OSDTime">ccffffff</color>
+	<color name="OSDProgress">eeb10000</color>
+	
+<!-- Window menu colours -->
+
+	<color name="MenuValue">FFebebeb</color>
+	
+<!-- Home page colours -->
+	
+	<color name="MainMenuNF">28a8a8a8</color>	
+	<color name="MainMenu">198c8c8c</color>
+	<color name="MainMenuLabel">FF888787</color>	
+
+<!-- Poster view colours -->
+	
+	<color name="PosterTitle">FFc7c7c7</color>
+	<color name="EpisodeLabelF">FFc7c7c7</color>	
+	<color name="EpisodePlot">FFc7c7c7</color>	
+	<color name="EpisodeNumber">FFc7c7c7</color>		
+	
+<!-- Info dialog colours -->
+
+	<color name="InfoTitle">B9707070</color>
+	<color name="InfoPlot">B9707070</color>
+	<color name="InfoYear">B9707070</color>	
+	<color name="InfoGenre">B9707070</color>		
+	<color name="InfoDetails">B9707070</color>
+
+<!-- Progress dialogs -->
+
+	<color name="ProgressDialog">99ffffff</color>
+	<color name="SettingsHeading">abc7c7c7</color>	
+	<color name="SettingsDetail">abc7c7c7</color>		
+	
+<!-- List colours -->
+
+	<color name="ListTrackNF">bbffffff</color>
+	<color name="ListTitleNF">FFc7c7c7</color>
+	<color name="ListTrackF">bbffffff</color>
+	<color name="ListTitleF">FFc7c7c7</color>	
+
+</colors>

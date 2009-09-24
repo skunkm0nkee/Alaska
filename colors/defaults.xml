@@ -1,0 +1,68 @@
+<colors>
+
+<!-- Base colours -->
+
+	<color name="Black">FF262626</color>
+	<color name="Grey">FF686868</color>
+	<color name="Red">FFFF0000</color>
+
+<!-- Global colours -->
+
+	<color name="Time">77686868</color>
+	<color name="Date">77686868</color>
+	<color name="RSSBody">FF686868</color>
+	<color name="RSSHighlight">FF686868</color>
+	<color name="RSSHeadline">FF686868</color>
+	<color name="RSSTitle">FF686868</color>
+	<color name="NowPlayingArtist">FF686868</color>
+	<color name="NowPlayingAlbum">cc686868</color>
+	<color name="NowPlayingTrack">FF686868</color>
+	<color name="MediaMenu">77686868</color>
+	
+<!-- OSD -->
+	<color name="OSDPlayingArtist">FF686868</color>
+	<color name="OSDPlayingTrack">FF686868</color>
+	<color name="OSDPlayingAlbum">77686868</color>
+	<color name="OSDPlayingPN">FF686868</color>
+	<color name="OSDDetails">FF686868</color>
+	<color name="OSDTime">B9202020</color>
+	<color name="OSDProgress">55686868</color>
+<!-- Window menu colours -->
+
+	<color name="MenuValue">FF5b5b5b</color>
+	
+<!-- Home page colours -->
+	
+	<color name="MainMenuNF">28686868</color>	
+	<color name="MainMenu">193c3c3c</color>
+	<color name="MainMenuLabel">FF383737</color>	
+
+<!-- Poster view colours -->
+	
+	<color name="PosterTitle">FF474747</color>
+	<color name="EpisodeLabelF">FF474747</color>	
+	<color name="EpisodePlot">FF474747</color>	
+	<color name="EpisodeNumber">FF474747</color>		
+	
+<!-- Info dialog colours -->
+
+	<color name="InfoTitle">B9202020</color>
+	<color name="InfoPlot">B9202020</color>
+	<color name="InfoYear">B9202020</color>	
+	<color name="InfoGenre">B9202020</color>		
+	<color name="InfoDetails">B9202020</color>
+
+<!-- Progress dialogs -->
+
+	<color name="ProgressDialog">77686868</color>
+	<color name="SettingsHeading">ab474747</color>	
+	<color name="SettingsDetail">ab474747</color>		
+	
+<!-- List colours -->
+
+	<color name="ListTrackNF">FF686868</color>
+	<color name="ListTitleNF">FF474747</color>
+	<color name="ListTrackF">FF686868</color>
+	<color name="ListTitleF">FF474747</color>	
+
+</colors>

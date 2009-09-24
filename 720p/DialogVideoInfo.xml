@@ -1,0 +1,278 @@
+<!--Alaska-->
+
+<window type="dialog" id="2003">
+	<defaultcontrol>7050</defaultcontrol>
+	<controls>
+		<control type="label">
+			<include>WindowID</include>
+			<label>DialogVideoInfo.xml</label>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
+	<!-- invisible button to trigger view options -->
+		<control type="button" id="7050">
+			<texturefocus/>
+			<texturenofocus/>
+			<onleft>50</onleft>
+			<onright>50</onright>
+			<onup>7001</onup>
+			<ondown>7001</ondown>
+			<onclick/>
+		</control>
+		<control type="group">
+			<posx>583</posx>
+			<posy>115</posy>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_CommonFade</include>
+			<control type="label">
+				<width>550</width>
+				<font>Font_PosterTitle</font>
+				<textcolor>InfoTitle</textcolor>
+				<info>ListItem.Title</info>
+			</control>
+			<control type="label">
+				<posx>188</posx>
+				<posy>45</posy>
+				<width>141</width>
+				<height>76</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Font_InfoYear</font>
+				<textcolor>InfoYear</textcolor>
+				<info>ListItem.Year</info>
+			</control>
+			<control type="label">
+				<posx>350</posx>
+				<posy>45</posy>
+				<width>215</width>
+				<height>76</height>
+				<aligny>center</aligny>
+				<font>Font_InfoGenre</font>
+				<textcolor>InfoGenre</textcolor>
+				<info>ListItem.Duration</info>
+				<wrapmultiline>true</wrapmultiline>
+			</control>
+			<control type="image">
+				<posy>66</posy>
+				<width>166</width>
+				<height>38</height>
+				<texture>flags/Rating/mpaa_restricted.png</texture>
+				<colordiffuse>B9202020</colordiffuse>
+			</control>
+			<control type="label">
+				<posx>125</posx>
+				<posy>130</posy>
+				<width>550</width>
+				<font>Font_InfoDetails</font>
+				<textcolor>InfoDetails</textcolor>
+				<info>ListItem.Director</info>
+			</control>
+			<control type="label">
+				<posx>125</posx>
+				<posy>154</posy>
+				<width>550</width>
+				<font>Font_InfoDetails</font>
+				<textcolor>InfoDetails</textcolor>
+				<info>ListItem.Writer</info>
+			</control>
+			<control type="textbox">
+				<posx>125</posx>
+				<posy>191</posy>
+				<width>550</width>
+				<height>68</height>
+				<font>Font_InfoCast</font>
+				<textcolor>InfoPlot</textcolor>
+				<info>ListItem.CastAndRole</info>
+			</control>
+			<control type="textbox">
+				<visible>!Control.IsVisible(50)</visible>
+				<posy>281</posy>
+				<width>550</width>
+				<height>130</height>
+				<font>Font_InfoPlot</font>
+				<textcolor>InfoPlot</textcolor>
+				<info>ListItem.Plot</info>
+				<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+			</control>
+			<control type="panel" id="50">
+				<posx>170</posx>
+				<posy>281</posy>
+				<width>580</width>
+				<height>160</height>
+				<onleft>7001</onleft>
+				<onright>7001</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<viewtype label="">list</viewtype>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<orientation>vertical</orientation>
+				<itemlayout height="26" width="480">
+					<control type="label">
+						<posx>0</posx>
+						<posy>3</posy>
+						<width>580</width>
+						<height>20</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<font>Font_InfoPlot</font>
+						<textcolor>InfoPlot</textcolor>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="24" width="580">
+					<control type="label">
+						<posx>0</posx>
+						<posy>3</posy>
+						<width>580</width>
+						<height>20</height>
+						<align>left</align>
+						<aligny>center</aligny>
+					<font>Font_ListDetail</font>
+						<textcolor>ListTitleF</textcolor>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="image">
+				<description>Actor image</description>
+				<posx>0</posx>
+				<posy>281</posy>
+				<width>160</width>
+				<height>160</height>
+				<texture>$INFO[Container(50).Listitem.Icon]</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>Control.IsVisible(50)</visible>
+			</control>
+		</control>
+	<!-- view options -->
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture>filter.png</texture>
+			<visible>ControlGroup(7001).HasFocus</visible>
+			<colordiffuse>f1FFFFFF</colordiffuse>
+			<animation effect="fade" start="0" end="100" time="200">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
+		</control>
+		<control type="grouplist" id="7001">
+			<width>1000</width>
+			<height>40</height>
+			<posx>140</posx>
+			<onup>7050</onup>
+			<ondown>7050</ondown>
+			<itemgap>0</itemgap>
+			<visible allowhiddenfocus="true">ControlGroup(7001).HasFocus</visible>
+			<include>Animation_ZoomInMenu</include>
+			<orientation>horizontal</orientation>
+			<posy>330</posy>
+		<!-- Cast/Review -->
+			<control type="button" id="5">
+				<description>Cast/Review</description>
+				<label>206</label>
+				<include>WindowMenuButton</include>
+				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(5)">
+					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />
+				</animation>
+			</control>
+		<!-- refresh -->
+			<control type="button" id="6">
+				<description>Refresh</description>
+				<label>184</label>
+				<include>WindowMenuButton</include>
+				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(6)">
+					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />
+				</animation>
+			</control>
+		<!-- Fanart -->
+			<control type="button" id="12">
+				<description>Get Fanart</description>
+<!-- LOC -->	<label>Fanart</label>
+				<include>WindowMenuButton</include>
+				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(12)">
+					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />
+				</animation>
+			</control>
+		<!-- Thumb -->
+			<control type="button" id="10">
+				<description>Thumb</description>
+<!-- LOC -->	<label>Thumb</label>
+				<include>WindowMenuButton</include>
+				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(10)">
+					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />
+				</animation>
+			</control>
+		<!-- Play Trailer -->
+			<control type="button" id="11">
+				<description>Play Trailer</description>
+				<label>20410</label>
+				<include>WindowMenuButton</include>
+				<enable>!IsEmpty(ListItem.Trailer)</enable>
+				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(11)">
+					<effect type="zoom" center="100,0" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />
+				</animation>
+			</control>
+		</control>
+		<control type="grouplist">
+			<width>1000</width>
+			<height>40</height>
+			<posx>140</posx>
+			<onup>7050</onup>
+			<ondown>7050</ondown>
+			<itemgap>0</itemgap>
+			<visible allowhiddenfocus="true">ControlGroup(7001).HasFocus</visible>
+			<include>Animation_ZoomInMenu</include>
+			<orientation>horizontal</orientation>
+			<posy>307</posy>
+		<!-- Cast/Review -->
+			<control type="button" id="7040">
+				<include>WindowMenuLabel</include>
+<!-- LOC -->	<label>View</label>
+				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(5)">
+					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />
+				</animation>
+			</control>
+		<!-- refresh -->
+			<control type="button" id="7041">
+				<include>WindowMenuLabel</include>
+<!-- LOC -->	<label>Information</label>
+				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(6)">
+					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />
+				</animation>
+			</control>
+		<!-- Fanart -->
+			<control type="button" id="7042">
+				<include>WindowMenuLabel</include>
+<!-- LOC -->	<label>Get</label>
+				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(12)">
+					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />
+				</animation>
+			</control>
+		<!-- Thumb -->
+			<control type="button" id="7043">
+				<include>WindowMenuLabel</include>
+<!-- LOC -->	<label>Get</label>
+				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(10)">
+					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />
+				</animation>
+			</control>
+		<!-- Play Trailer -->
+			<control type="button" id="7044">
+				<include>WindowMenuLabel</include>
+				<label>208</label>
+				<animation type="conditional" condition="!ControlGroup(7001).HasFocus(11)">
+					<effect type="zoom" center="100,30" start="100" end="70" time="200" tween="cubic" easing="in" />
+					<effect type="fade" start="100" end="50" time="200" />
+				</animation>
+			</control>
+		</control>
+		<include>Object_DebugGrid</include>
+	</controls>
+</window>

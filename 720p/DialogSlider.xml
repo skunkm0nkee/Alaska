@@ -1,0 +1,16 @@
+<window id="145">
+	<controls>
+
+		<include>Global_Background</include>
+		<include>Global_Filter</include>
+
+		<control type="label">
+			<include>DialogID</include>
+			<label>DialogSlider.xml</label>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
+
+		<include>Object_DebugGrid</include>
+
+	</controls>
+</window>

@@ -1,0 +1,40 @@
+<window id="107">
+<defaultcontrol>402</defaultcontrol>
+  
+<coordinates>
+  <system>1</system>
+  <posx>0</posx>
+  <posy>0</posy>
+</coordinates>
+  
+<controls>
+    
+<include>Global_BackgroundFilter</include>
+
+  <control type="label">
+    <include>DialogID</include>
+    <label>DialogKaiToast.xml</label>
+			<visible>Skin.HasSetting(debugmode)</visible>
+  </control>
+
+  <control type="label" id="401">
+    <description>heading</description>
+    <posx>10</posx>
+    <posy>40</posy>
+    <width>500</width>
+    <label>-</label>
+  </control>
+
+  <control type="label" id="402">
+    <description>Line 1</description>
+    <posx>10</posx>
+    <posy>72</posy>
+    <width>500</width>
+    <label>-</label>
+  </control>
+  
+		<include>Object_DebugGrid</include>
+
+</controls>
+  
+</window>

@@ -1,0 +1,44 @@
+<window id="1">
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<include>Global_Background</include>
+		
+		<include>Viewtype_Files</include>
+		
+		<control type="fixedlist" id="50">
+			<visible>false</visible>
+		</control>
+		<include>Global_ContextFilter</include>
+		
+		<control type="grouplist" id="7000">
+			<include>WindowMenuVars</include>
+			<posy>330</posy>
+			<!--control type="button" id="2">
+				<description>View</description>
+				<include>WindowMenuButton</include>
+			</control>
+			<control type="button" id="3">
+				<description>Sort</description>
+				<include>WindowMenuButton</include>
+			</control>
+			<control type="togglebutton" id="4">
+				<description>Ascending</description>
+				<include>WindowMenuButton</include>
+				<label>$LOCALIZE[584]</label>
+				<altlabel>$LOCALIZE[585]</altlabel>
+			</control-->
+		</control>
+		
+		<include>Global_Time</include>
+		<include>Global_Heading</include>
+		<include>Global_RSS</include>
+		
+		<include>Object_DebugGrid</include>
+		<control type="label">
+			<include>WindowID</include>
+			<label>MyPrograms.xml</label>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
+	</controls>
+</window>

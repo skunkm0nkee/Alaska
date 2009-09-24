@@ -1,0 +1,93 @@
+<!--Alaska-->
+
+<includes>
+	<include name="PosterMediaFlagsVars">
+		<posy>530</posy>
+		<width>89</width>
+		<height>59</height>
+		<colordiffuse>CC474747</colordiffuse>
+	</include>
+	<include name="PosterMediaFlags">
+		<control type="group">
+			<include>Animation_SlideUpFadeOut</include>
+			<include>Animation_HiddenByInfo</include>
+			<posx>45</posx>
+			<animation effect="slide" start="0,0" end="-345,-400" condition="Control.IsVisible(52)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,35" condition="Control.IsVisible(55)">Conditional</animation>
+			<visible>Skin.HasSetting(mediaflagson) + [Container.Content(movies) | Container.Content(episodes)]</visible>
+			<control type="group">
+				<posx>785</posx>
+				<control type="image">
+					<include>PosterMediaFlagsVars</include>
+					<texture>flags/default.png</texture>
+					<visible>!Control.IsVisible(81) + !Skin.HasSetting(nodefaultflags)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>PosterMediaFlagsVars</include>
+					<texture fallback="flags/default.png">$INFO[Listitem.studio,flags/studios/,.png]</texture>
+				</control>
+			</control>
+			<control type="group">
+				<posx>995</posx>
+				<control type="image">
+					<include>PosterMediaFlagsVars</include>
+					<texture>flags/defaultscreen.png</texture>
+					<visible>!Control.IsVisible(83) + !Skin.HasSetting(nodefaultflags)</visible>
+				</control>
+				<control type="image" id="83">
+					<include>PosterMediaFlagsVars</include>
+					<texture fallback="flags/defaultscreen.png">$INFO[ListItem.VideoResolution,flags/VideoResolution/,.png]</texture>
+				</control>
+			</control>
+			<control type="group">
+				<posx>1100</posx>
+				<control type="image">
+					<include>PosterMediaFlagsVars</include>
+					<texture>flags/defaultsound.png</texture>
+					<visible>!Control.IsVisible(84) + !Skin.HasSetting(nodefaultflags)</visible>
+				</control>
+				<control type="image" id="84">
+					<include>PosterMediaFlagsVars</include>
+					<texture fallback="flags/defaultsound.png">$INFO[Listitem.AudioCodec,flags/AudioCodec/,.png]</texture>
+				</control>
+				<control type="image" id="84">
+					<include>PosterMediaFlagsVars</include>
+					<texture>$INFO[Listitem.AudioChannels,flags/AudioChannels/,ch.png]</texture>
+				</control>
+			</control>
+			<control type="group">
+				<posx>890</posx>
+				<control type="image">
+					<include>PosterMediaFlagsVars</include>
+					<texture>flags/defaultsource.png</texture>
+					<visible>!Control.IsVisible(82) + !Skin.HasSetting(nodefaultflags)</visible>
+				</control>
+				<control type="image" id="82">
+					<include>PosterMediaFlagsVars</include>
+					<texture>$INFO[ListItem.VideoCodec,flags/VideoCodec/,.png]</texture>
+					<visible>!substring(listitem.filename,hdtv) + !substring(listitem.filename,dvd) + !substring(listitem.filename,bluray) + !substring(listitem.filename,blu-ray) + !substring(listitem.filename,bdrip) + !substring(listitem.filename,.iso,Right) + !substring(listitem.filename,.ifo,Right)</visible>
+				</control>
+				<control type="image" id="82">
+					<include>PosterMediaFlagsVars</include>
+					<texture>flags/Source/hdtv.png</texture>
+					<visible>substring(listitem.filename,hdtv)</visible>
+				</control>
+				<control type="image" id="82">
+					<include>PosterMediaFlagsVars</include>
+					<texture>flags/Source/hddvd.png</texture>
+					<visible>substring(listitem.filename,hddvd) | substring(listitem.filename,hd-dvd)</visible>
+				</control>
+				<control type="image" id="82">
+					<include>PosterMediaFlagsVars</include>
+					<texture>flags/Source/bluray.png</texture>
+					<visible>substring(listitem.filename,bluray) | substring(listitem.filename,blu-ray) | substring(listitem.filename,bdrip)</visible>
+				</control>
+				<control type="image" id="82">
+					<include>PosterMediaFlagsVars</include>
+					<texture>flags/Source/dvd.png</texture>
+					<visible>[substring(listitem.filename,dvd) + !substring(listitem.filename,hddvd) + !substring(listitem.filename,hd-dvd) + !substring(listitem.filename,bluray)] | [substring(listitem.filename,.iso,Right) + !substring(listitem.filename,bluray)] | substring(listitem.filename,.ifo,Right)</visible>
+				</control>
+			</control>
+		</control>
+	</include>
+</includes>
