@@ -133,7 +133,7 @@
 			<name>Font_EpisodePlot</name>
 			<filename>alaska_light_nocaps.ttf</filename>
 			<size>21</size>
-			<linespacing>1</linespacing>
+			<linespacing>0.7</linespacing>
 		</font>	
 
 		<font>

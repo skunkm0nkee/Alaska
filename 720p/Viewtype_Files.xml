@@ -4,8 +4,8 @@
 	<include name="Viewtype_Files">
 		<control type="fixedlist" id="55">
 			<posx>490</posx>
-			<posy>40</posy>
-			<height>650</height>
+			<posy>10</posy>
+			<height>710</height>
 			<width>1250</width>
 			<onup>55</onup>
 			<ondown>55</ondown>
@@ -13,17 +13,17 @@
 			<onright>7000</onright>
 			<viewtype label="Files">list</viewtype>
 			<orientation>vertical</orientation>
-			<focusposition>5</focusposition>
+			<focusposition>7</focusposition>
 			<include>Animation_ZoomInZoomOut</include>
 			<include>Animation_ZoomedByMenu</include>
 			<include>Animation_HiddenByInfo</include>
 			<include>Animation_HiddenByMusicInfo</include>
-			<itemlayout width="1210" height="50">
+			<itemlayout width="1210" height="40">
 				<control type="label">
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>750</width>
-					<height>50</height>
+					<height>40</height>
 					<aligny>center</aligny>
 					<font>Font_ListTitleNF</font>
 					<textcolor>ListTitleNF</textcolor>
@@ -34,7 +34,7 @@
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>750</width>
-					<height>49</height>
+					<height>40</height>
 					<aligny>center</aligny>
 					<font>Font_ListTitleNF</font>
 					<textcolor>ListTitleNF</textcolor>
@@ -45,7 +45,7 @@
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>750</width>
-					<height>49</height>
+					<height>40</height>
 					<aligny>center</aligny>
 					<font>Font_ListTitleNF</font>
 					<textcolor>ListTitleNF</textcolor>
@@ -56,7 +56,7 @@
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>750</width>
-					<height>25</height>
+					<height>40</height>
 					<aligny>center</aligny>
 					<font>Font_ListTitleNF</font>
 					<textcolor>ListTitleNF</textcolor>
@@ -67,48 +67,15 @@
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>750</width>
-					<height>25</height>
+					<height>40</height>
 					<aligny>center</aligny>
 					<font>Font_ListTitleNF</font>
 					<textcolor>ListTitleNF</textcolor>
 					<label>$INFO[ListItem.Episode]. $INFO[ListItem.Title]</label>
 					<visible>!IsEmpty(ListItem.Title) + Window.IsActive(25) + Container.Content(episodes)</visible>
 				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>22</posy>
-					<width>750</width>
-					<height>17</height>
-					<aligny>center</aligny>
-					<font>Font_ListDetailNF</font>
-					<textcolor>ListTitleNF</textcolor>
-					<label>$INFO[ListItem.Duration]</label>
-					<visible>!IsEmpty(ListItem.Title) + Window.IsActive(25)</visible>
-				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>22</posy>
-					<width>750</width>
-					<height>17</height>
-					<aligny>center</aligny>
-					<font>Font_ListDetailNF</font>
-					<textcolor>ListTitleNF</textcolor>
-					<label>$LOCALIZE[20416]: $INFO[ListItem.Date]</label>
-					<visible>!IsEmpty(ListItem.Date) + Window.IsActive(25) + Container.Content(episodes)</visible>
-				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>22</posy>
-					<width>750</width>
-					<height>17</height>
-					<aligny>center</aligny>
-					<font>Font_ListDetailNF</font>
-					<textcolor>ListTitleNF</textcolor>
-					<label>$LOCALIZE[20360]: $INFO[ListItem.Episode]</label>
-					<visible>!IsEmpty(ListItem.Episode) + Window.IsActive(25) + Container.Content(tvshows)</visible>
-				</control>
 			</itemlayout>
-			<focusedlayout width="750" height="100">
+			<focusedlayout width="750" height="105">
 				<control type="label">
 					<posx>0</posx>
 					<posy>5</posy>
@@ -118,9 +85,9 @@
 					<font>Font_ListTitleBigger</font>
 					<textcolor>ListTitleF</textcolor>
 					<label>$INFO[ListItem.Label]</label>
-					<visible>Container.Content(files) | [IsEmpty(ListItem.Title) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)]</visible>
+					<visible>[!Container.Content(artists)+!Container.Content(albums)+!Container.Content(songs)+!Container.Content(tvshows)+!Container.Content(seasons)+!Container.Content(episodes)]</visible>
 				</control>
-				<control type="label">
+				<!--control type="label">
 					<posx>0</posx>
 					<posy>8</posy>
 					<width>750</width>
@@ -132,17 +99,7 @@
 					<visible>!IsEmpty(ListItem.Title) + Window.IsActive(25) + !Container.Content(episodes)</visible>
 					<animation effect="slide" start="0,8" end="0,8" time="0" condition="Container.Content(tvshows)">Conditional</animation>
 				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>8</posy>
-					<width>750</width>
-					<height>25</height>
-					<aligny>center</aligny>
-					<font>Font_ListTitleBig</font>
-					<textcolor>ListTitleF</textcolor>
-					<label>$INFO[ListItem.Episode]. $INFO[ListItem.Title]</label>
-					<visible>!IsEmpty(ListItem.Title) + Window.IsActive(25) + Container.Content(episodes)</visible>
-				</control>
+
 				<control type="label">
 					<posx>0</posx>
 					<posy>38</posy>
@@ -155,25 +112,122 @@
 					<visible>!IsEmpty(ListItem.Genre) + Window.IsActive(25) + !Container.Content(seasons)</visible>
 					<animation effect="slide" start="0,8" end="0,8" time="0" condition="Container.Content(tvshows)">Conditional</animation>
 				</control>
-				<control type="textbox">
-					<posx>0</posx>
-					<posy>32</posy>
-					<width>550</width>
-					<height>54</height>
-					<font>Font_EpisodePlot</font>
-					<textcolor>EpisodePlot</textcolor>
-					<label>$INFO[ListItem.Plot]</label>
-					<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-					<visible>!IsEmpty(ListItem.Plot) + Window.IsActive(25) + Container.Content(episodes)</visible>
-				</control>
 				<control type="image">
 					<posx>0</posx>
 					<posy>58</posy>
 					<width>121</width>
 					<height>22</height>
 					<texture>$INFO[ListItem.StarRating]</texture>
-					<visible>[Window.IsActive(25)+ ![Container.Content(seasons) | Container.Content(episodes)]]| | Window.IsActive(502)</visible>
+					<visible>[Window.IsActive(25)+ ![Container.Content(seasons) | Container.Content(episodes)]]</visible>
 					<animation effect="slide" start="0,8" end="0,8" time="0" condition="Container.Content(tvshows)">Conditional</animation>
+				</control-->
+			<!-- TV Shows -->
+				<control type="group">
+					<visible>Container.Content(tvshows)</visible>
+					<control type="label">
+						<posx>0</posx>
+						<posy>15</posy>
+						<width>750</width>
+						<height>25</height>
+						<aligny>center</aligny>
+						<font>Font_ListTitleBig</font>
+						<textcolor>ListTitleF</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<posx>0</posx>
+						<posy>45</posy>
+						<width>750</width>
+						<height>17</height>
+						<aligny>center</aligny>
+						<font>Font_ListDetail</font>
+						<textcolor>ListTitleF</textcolor>
+						<label>$INFO[ListItem.Genre]</label>
+						<visible>!IsEmpty(ListItem.Genre)</visible>
+					</control>
+					<control type="label">
+						<posx>0</posx>
+						<posy>65</posy>
+						<width>750</width>
+						<height>17</height>
+						<aligny>center</aligny>
+						<font>Font_ListDetailNF</font>
+						<textcolor>ListTitleNF</textcolor>
+						<label>[B]$LOCALIZE[20360]:[/B] $INFO[ListItem.Episode]</label>
+						<visible>!IsEmpty(ListItem.Episode)</visible>
+					</control>
+				</control>
+			<!-- Seasons -->
+				<control type="group">
+					<visible>Container.Content(seasons)</visible>
+					<control type="label">
+						<posx>0</posx>
+						<posy>15</posy>
+						<width>750</width>
+						<height>25</height>
+						<aligny>center</aligny>
+						<font>Font_ListTitleBig</font>
+						<textcolor>ListTitleF</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<posx>0</posx>
+						<posy>45</posy>
+						<width>750</width>
+						<height>17</height>
+						<aligny>center</aligny>
+						<font>Font_ListDetailNF</font>
+						<textcolor>ListTitleNF</textcolor>
+						<label>[B]$LOCALIZE[20360]:[/B] $INFO[ListItem.Episode]</label>
+						<visible>!IsEmpty(ListItem.Episode)</visible>
+					</control>
+					<control type="label">
+						<posx>0</posx>
+						<posy>65</posy>
+						<width>750</width>
+						<height>17</height>
+						<aligny>center</aligny>
+						<font>Font_ListDetailNF</font>
+						<textcolor>ListTitleNF</textcolor>
+						<label>[B]UnWatched:[/B] $INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+						<visible>!IsEmpty(ListItem.Episode)</visible>
+					</control>
+				</control>
+			<!-- episodes -->
+				<control type="group">
+					<visible>Container.Content(episodes)</visible>
+					<control type="label">
+						<posx>0</posx>
+						<posy>10</posy>
+						<width>750</width>
+						<height>25</height>
+						<aligny>center</aligny>
+						<font>Font_ListTitleBig</font>
+						<textcolor>ListTitleF</textcolor>
+						<label>$INFO[ListItem.Episode]. $INFO[ListItem.Title]</label>
+						<visible>!IsEmpty(ListItem.Title)</visible>
+					</control>
+					<control type="label">
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>750</width>
+						<height>17</height>
+						<aligny>center</aligny>
+						<font>Font_ListDetail</font>
+						<textcolor>ListTitleF</textcolor>
+						<label>[B]$LOCALIZE[20416]:[/B] $INFO[ListItem.Date]</label>
+					</control>
+					<control type="textbox">
+						<posx>0</posx>
+						<posy>55</posy>
+						<width>550</width>
+						<height>40</height>
+						<font>Font_EpisodePlot</font>
+						<textcolor>EpisodePlot</textcolor>
+						<label>$INFO[ListItem.Plot]</label>
+						<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+						<visible>!IsEmpty(ListItem.Plot)</visible>
+					</control>
 				</control>
 			<!-- Programs -->
 				<control type="group">
@@ -372,7 +426,7 @@
 			<posx>28</posx>
 			<posy>185</posy>
 			<width>440</width>
-			<height>300</height>
+			<height>310</height>
 			<fadetime>400</fadetime>
 			<aspectratio align="right" aligny="center">keep</aspectratio>
 			<texture>$INFO[Container(55).ListItem.Icon]</texture>
