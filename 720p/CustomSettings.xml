@@ -125,6 +125,17 @@
 					<onclick>Skin.ToggleSetting(largeRSS)</onclick>
 					<selected>Skin.HasSetting(largeRSS)</selected>
 				</control>
+				<control type="radiobutton" id="103">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>ListTrackF</textcolor>
+					<focusedcolor>Black</focusedcolor>
+<!-- LOC -->		<label>only show RSS on home screen</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(RSS_olny_on_home)</onclick>
+					<selected>Skin.HasSetting(RSS_olny_on_home)</selected>
+				</control>
 			</control>
 			<control type="grouplist" id="9002">
 				<visible>Container(9000).Hasfocus(2)</visible>
