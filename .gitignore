@@ -1,15 +1,11 @@
 # .gitignore for Alaska
 
-
-
 # generated files 
-
 *.bak
-
 *.db
 
-
-
 #SourceMonitor
-
 *.smp
+
+#ImageSource
+*.psd
