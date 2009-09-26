@@ -8,6 +8,7 @@
 
 <!-- Global colours -->
 
+	<color name="backgroundColor">FFEFC1D4</color><!--FFEFC1D4-->
 	<color name="Time">77686868</color>
 	<color name="Date">77686868</color>
 	<color name="RSSBody">FF686868</color>

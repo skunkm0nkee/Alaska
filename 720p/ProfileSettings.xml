@@ -1,21 +1,12 @@
 <window id="130">
-<defaultcontrol always="true">5</defaultcontrol>
-  
-<coordinates>
-  <system>1</system>
-  <posx>0</posx>
-  <posy>0</posy>
-</coordinates>
-  
-<controls>
-    
-<include>Global_BackgroundFilter</include>
-
-  <control type="label">
-	  <include>DialogID</include>
-	  <label>ProfileSettings.xml</label>
+	<defaultcontrol always="true">5</defaultcontrol>
+	<controls>
+		<include>Global_Background</include>
+		<control type="label">
+			<include>DialogID</include>
+			<label>ProfileSettings.xml</label>
 			<visible>Skin.HasSetting(debugmode)</visible>
-  </control>
+		</control>
   
 	<control type="label" id="1000">
 		<description>Profile Name</description>

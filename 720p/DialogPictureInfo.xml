@@ -9,7 +9,12 @@
 		</control-->
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
-			<texture diffuse="list/list_mask_3.png">filter.png</texture>
+			<texture diffuse="list/list_mask_3.png">backdrops/background.png</texture>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture diffuse="list/list_mask_3.png">backdrops/backgroundcolordiffuse.png</texture>
+			<colordiffuse>backgroundColor</colordiffuse>
 		</control>
 		<control type="label">
 			<include>DialogID</include>

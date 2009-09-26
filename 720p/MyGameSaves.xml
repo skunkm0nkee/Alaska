@@ -1,15 +1,13 @@
 <window id="35">
-<defaultcontrol always="yes">50</defaultcontrol>
-<allowoverlay>yes</allowoverlay>
-  
-<controls>
-
-  <control type="label">
-    <include>WindowID</include>
-    <label>MyGameSaves.xml</label>
+	<defaultcontrol always="yes">50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<include>Global_Background</include>
+		<control type="label">
+			<include>WindowID</include>
+			<label>MyGameSaves.xml</label>
 			<visible>Skin.HasSetting(debugmode)</visible>
-  </control>
-  
+		</control>
 	<control type="grouplist" id="9000">
 		<posx>10</posx>
 		<posy>40</posy>

@@ -6,11 +6,20 @@
 		</control>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
-			<texture diffuse="list/list_mask_1.png">filter.png</texture>
+			<texture diffuse="list/list_mask_1.png">backdrops/background.png</texture>
 			<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 			<animation effect="fade" start="100" end="0" time="400" delay="400">Hidden</animation>
 			<visible>Player.ShowInfo + Player.HasMedia</visible>
 		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture diffuse="list/list_mask_1.png">backdrops/backgroundcolordiffuse.png</texture>
+			<colordiffuse>backgroundColor</colordiffuse>
+			<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="400" delay="400">Hidden</animation>
+			<visible>Player.ShowInfo + Player.HasMedia</visible>
+		</control>
+		
 		<control type="group">
 			<visible>Player.ShowInfo + Player.HasMedia</visible>
 			<posx>30</posx>

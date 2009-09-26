@@ -228,14 +228,7 @@
 			</control>
 		</control>
 	<!-- view options -->
-		<control type="image">
-			<include>Dimensions_Fullscreen</include>
-			<texture>filter.png</texture>
-			<visible>ControlGroup(7001).HasFocus</visible>
-			<colordiffuse>f1FFFFFF</colordiffuse>
-			<animation effect="fade" start="0" end="100" time="200">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
-		</control>
+		<include>Global_ContextFilter</include>
 		<control type="grouplist" id="7001">
 			<width>1000</width>
 			<height>40</height>

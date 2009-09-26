@@ -1,16 +1,13 @@
 <window id="28">
-<defaultcontrol>50</defaultcontrol>
-<allowoverlay>yes</allowoverlay>
-  
-<controls>
-
-	<include>Global_BackgroundFilter</include>
-
-  <control type="label">
-    <include>WindowID</include>
-    <label>MyVideoPlaylist.xml</label>
+	<defaultcontrol>50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<include>Global_Background</include>
+		<control type="label">
+			<include>WindowID</include>
+			<label>MyVideoPlaylist.xml</label>
 			<visible>Skin.HasSetting(debugmode)</visible>
-  </control>
+		</control>
   
 	<control type="grouplist" id="9000">
 		<posx>10</posx>

@@ -3,25 +3,8 @@
 <window id="12">
 	<defaultcontrol>9999</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-
 	<controls>
-
-		<include>Global_Filter</include>
-
-		<control type="label">
-			<include>WindowID</include>
-			<label>SettingsCategory.xml</label>
-			<visible>Skin.HasSetting(debugmode)</visible>
-		</control>
-		
-		<control type="label">
-			<include>Animation_CommonFadeNoHide</include>
-			<posx>150</posx>
-			<posy>125</posy>
-			<font>Font_SettingsHeading</font>
-			<textcolor>SettingsHeading</textcolor>
-			<label>SETTINGS</label>
-		</control>
+		<include>Global_Background</include>
 
 		<control type="grouplist" id="3">
 			<description>Button Area</description>
@@ -35,11 +18,13 @@
 			<onup>3</onup>
 			<ondown>3</ondown>
 			<orientation>vertical</orientation>
+			<include>Animation_ZoomedByMenu</include>
 			<include>Animation_CommonFadeNoHide</include>
 		</control>
 
 		<control type="grouplist" id="5">
 			<description>Control Area</description>
+			<include>Animation_ZoomedByMenu</include>
 			<include>Animation_SettingsFloat</include>
 			<include>Animation_ZoomInZoomOut</include>
 			<posx>360</posx>
@@ -97,12 +82,16 @@
 			<focusedcolor>Black</focusedcolor>
 		</control>
 
+		<include>Global_ContextFilter</include>
 		<include>Global_Time</include>
 		<include>Setting_Heading</include>
 		<include>Global_RSS</include>
-
 		<include>Object_DebugGrid</include>
-
+		<control type="label">
+			<include>WindowID</include>
+			<label>SettingsCategory.xml</label>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
 	</controls>
 
 </window>

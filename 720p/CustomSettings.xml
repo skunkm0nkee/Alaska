@@ -4,20 +4,7 @@
 	<defaultcontrol>9000</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
-		<include>Global_Filter</include>
-		<control type="label">
-			<include>WindowID</include>
-			<label>CustomSettings.xml</label>
-			<visible>Skin.HasSetting(debugmode)</visible>
-		</control>
-		<control type="label">
-			<include>Animation_CommonFadeNoHide</include>
-			<posx>150</posx>
-			<posy>125</posy>
-			<font>Font_SettingsHeading</font>
-			<textcolor>SettingsHeading</textcolor>
-<!-- LOC --><label>CUSTOMISE</label>
-		</control>
+		<include>Global_Background</include>
 		<control type="list" id="9000">
 			<description>List</description>
 			<posx>150</posx>
@@ -28,6 +15,7 @@
 			<onright>9010</onright>
 			<onup>9000</onup>
 			<ondown>9000</ondown>
+			<include>Animation_ZoomedByMenu</include>
 			<include>Animation_CommonFadeNoHide</include>
 			<itemlayout height="34" width="300">
 				<control type="label">
@@ -82,6 +70,7 @@
 		<control type="group" id="9010">
 			<posy>175</posy>
 			<posx>360</posx>
+			<include>Animation_ZoomedByMenu</include>
 			<control type="grouplist" id="9001">
 				<visible>Container(9000).Hasfocus(1)</visible>
 				<width>740</width>
@@ -237,9 +226,16 @@
 				</control>
 			</control>
 		</control>
+		<include>Global_ContextFilter</include>
 		<include>Global_Time</include>
 		<include>Setting_Heading</include>
 		<include>Global_RSS</include>
+	<!-- debug -->
 		<include>Object_DebugGrid</include>
+		<control type="label">
+			<include>WindowID</include>
+			<label>CustomSettings.xml</label>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
 	</controls>
 </window>

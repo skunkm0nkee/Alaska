@@ -1,15 +1,13 @@
 <window id="3">
-<defaultcontrol>20</defaultcontrol>
-<allowoverlay>no</allowoverlay>
-  
-<controls>
-  
-  <control type="label">
-    <include>WindowID</include>
-    <label>FileManager.xml</label>
+	<defaultcontrol>20</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>Global_Background</include>
+		<control type="label">
+			<include>WindowID</include>
+			<label>FileManager.xml</label>
 			<visible>Skin.HasSetting(debugmode)</visible>
-  </control>
-  
+		</control>
 <!-- Left -->
   <control type="group">
     <posx>10</posx>

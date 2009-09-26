@@ -1,14 +1,13 @@
 <window id="29">
-<defaultcontrol always="true">52</defaultcontrol>
-<allowoverlay>no</allowoverlay>
-  
-<controls>
-  
-	<control type="label">
-		<include>WindowID</include>
-    <label>LoginScreen.xml</label>
+	<defaultcontrol always="true">52</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>Global_Background</include>
+		<control type="label">
+			<include>WindowID</include>
+			<label>LoginScreen.xml</label>
 			<visible>Skin.HasSetting(debugmode)</visible>
-	</control>
+		</control>
   
 	<control type="wraplist" id="52">
 		<description>Login Wraplist</description>

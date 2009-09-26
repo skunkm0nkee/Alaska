@@ -4,9 +4,7 @@
 	<defaultcontrol always="true">60</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
-
-		<include>Global_Filter</include>
-	
+		<include>Global_Background</include>
 		<control type="panel" id="60">
 			<posx>200</posx>
 			<posy>200</posy>
@@ -18,6 +16,7 @@
 			<ondown>60</ondown>
 			<scrolltime>200</scrolltime>
 			<viewtype label="536">icon</viewtype>
+			<include>Animation_ZoomedByMenu</include>
 			<include>Animation_SettingsFloat</include>
 			<include>Animation_ZoomInZoomOut</include>
 			<itemlayout height="200" width="200">
@@ -95,19 +94,19 @@
 
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
-			<texture diffuse="mainmenu/home_mask.png">filter.png</texture>
+			<texture diffuse="mainmenu/home_mask.png">backdrops/background.png</texture>
 		</control>
-
-		<control type="label">
-			<include>WindowID</include>
-			<label>Settings.xml</label>
-			<visible>Skin.HasSetting(debugmode)</visible>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture diffuse="mainmenu/home_mask.png">backdrops/backgroundcolordiffuse.png</texture>
+			<colordiffuse>backgroundColor</colordiffuse>
 		</control>
 
 		<control type="group">
 			<posx>130</posx>
 			<posy>210</posy>
 			<visible>Container(60).HasFocus(1)</visible>
+			<include>Animation_ZoomedByMenu</include>
 			<include>Animation_CommonFadeNoHide</include>
 			<control type="label">
 				<include>SettingsHeadingVars</include>
@@ -123,6 +122,7 @@
 			<posx>130</posx>
 			<posy>180</posy>
 			<visible>Container(60).HasFocus(4)</visible>
+			<include>Animation_ZoomedByMenu</include>
 			<include>Animation_CommonFadeNoHide</include>
 			<control type="label">
 				<include>SettingsHeadingVars</include>
@@ -138,6 +138,7 @@
 			<posx>130</posx>
 			<posy>150</posy>
 			<visible>Container(60).HasFocus(7)</visible>
+			<include>Animation_ZoomedByMenu</include>
 			<include>Animation_CommonFadeNoHide</include>
 			<control type="label">
 				<include>SettingsHeadingVars</include>
@@ -153,6 +154,7 @@
 			<posx>85</posx>
 			<posy>210</posy>
 			<visible>Container(60).HasFocus(2)</visible>
+			<include>Animation_ZoomedByMenu</include>
 			<include>Animation_CommonFadeNoHide</include>
 			<control type="label">
 				<include>SettingsHeadingVars</include>
@@ -168,6 +170,7 @@
 			<posx>85</posx>
 			<posy>180</posy>
 			<visible>Container(60).HasFocus(5)</visible>
+			<include>Animation_ZoomedByMenu</include>
 			<include>Animation_CommonFadeNoHide</include>
 			<control type="label">
 				<include>SettingsHeadingVars</include>
@@ -183,6 +186,7 @@
 			<posx>85</posx>
 			<posy>150</posy>
 			<visible>Container(60).HasFocus(8)</visible>
+			<include>Animation_ZoomedByMenu</include>
 			<include>Animation_CommonFadeNoHide</include>
 			<control type="label">
 				<include>SettingsHeadingVars</include>
@@ -198,6 +202,7 @@
 			<posx>880</posx>
 			<posy>410</posy>
 			<visible>Container(60).HasFocus(3)</visible>
+			<include>Animation_ZoomedByMenu</include>
 			<include>Animation_CommonFadeNoHide</include>
 			<control type="label">
 				<include>SettingsHeadingVars</include>
@@ -213,6 +218,7 @@
 			<posx>880</posx>
 			<posy>380</posy>
 			<visible>Container(60).HasFocus(6)</visible>
+			<include>Animation_ZoomedByMenu</include>
 			<include>Animation_CommonFadeNoHide</include>
 			<control type="label">
 				<include>SettingsHeadingVars</include>
@@ -228,6 +234,7 @@
 			<posx>880</posx>
 			<posy>350</posy>
 			<visible>Container(60).HasFocus(9)</visible>
+			<include>Animation_ZoomedByMenu</include>
 			<include>Animation_CommonFadeNoHide</include>
 			<control type="label">
 				<include>SettingsHeadingVars</include>
@@ -239,11 +246,16 @@
 			</control>
 		</control>
 		
+		<include>Global_ContextFilter</include>
 		<include>Global_Time</include>
 		<include>Setting_Heading</include>
 		<include>Global_RSS</include>
 
 		<include>Object_DebugGrid</include>
-		
+		<control type="label">
+			<include>WindowID</include>
+			<label>Settings.xml</label>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
 	</controls>
 </window>

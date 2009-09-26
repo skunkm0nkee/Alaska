@@ -71,7 +71,12 @@
 		</control>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
-			<texture diffuse="list/list_mask_1.png">filter.png</texture>
+			<texture diffuse="list/list_mask_1.png">backdrops/background.png</texture>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture diffuse="list/list_mask_1.png">backdrops/backgroundcolordiffuse.png</texture>
+			<colordiffuse>backgroundColor</colordiffuse>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -106,14 +111,8 @@
 			<include>Animation_ZoomInZoomOut</include>
 			<include>Animation_ZoomedByMenu</include>
 		</control>
-		<control type="image">
-			<include>Dimensions_Fullscreen</include>
-			<texture>filter.png</texture>
-			<visible>ControlGroup(7001).HasFocus</visible>
-			<colordiffuse>f1FFFFFF</colordiffuse>
-			<animation effect="fade" start="0" end="100" time="200">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
-		</control>
+	<!-- view options -->
+		<include>Global_ContextFilter</include>
 		<control type="grouplist" id="7001">
 			<width>1000</width>
 			<height>40</height>

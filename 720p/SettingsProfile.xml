@@ -1,23 +1,14 @@
 <window id="34">
-<defaultcontrol always="true">4</defaultcontrol>
-<allowoverlay>yes</allowoverlay>
-  
-<coordinates>
-  <system>1</system>
-  <posx>0</posx>
-  <posy>0</posy>
-</coordinates>
-  
-<controls>
-    
-<include>Global_BackgroundFilter</include>
-
-  <control type="label">
-	  <include>DialogID</include>
-	  <label>SettingsProfile.xml</label>
+	<defaultcontrol always="true">4</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<include>Global_Background</include>
+		<control type="label">
+			<include>DialogID</include>
+			<label>SettingsProfile.xml</label>
 			<visible>Skin.HasSetting(debugmode)</visible>
-  </control>
-  
+		</control>
+
 	<control type="radiobutton" id="4">
 		<description>Enable Login Screen</description>
 		<posx>10</posx>

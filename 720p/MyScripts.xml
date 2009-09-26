@@ -1,14 +1,13 @@
 <window id="20">
-<defaultcontrol always="yes">50</defaultcontrol>
-<allowoverlay>yes</allowoverlay>
-  
-<controls>
-
-  <control type="label">
-    <include>WindowID</include>
-    <label>MyScripts.xml</label>
+	<defaultcontrol always="yes">50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<include>Global_Background</include>
+		<control type="label">
+			<include>WindowID</include>
+			<label>MyScripts.xml</label>
 			<visible>Skin.HasSetting(debugmode)</visible>
-  </control>
+		</control>
   
 	<control type="grouplist" id="9000">
 		<posx>10</posx>
