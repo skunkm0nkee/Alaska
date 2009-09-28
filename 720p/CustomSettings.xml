@@ -15,8 +15,8 @@
 			<onright>9010</onright>
 			<onup>9000</onup>
 			<ondown>9000</ondown>
+			<include>Animation_ZoomInZoomOut</include>
 			<include>Animation_ZoomedByMenu</include>
-			<include>Animation_CommonFadeNoHide</include>
 			<itemlayout height="34" width="300">
 				<control type="label">
 					<posx>0</posx>
@@ -70,6 +70,7 @@
 		<control type="group" id="9010">
 			<posy>175</posy>
 			<posx>360</posx>
+			<include>Animation_ZoomInZoomOut</include>
 			<include>Animation_ZoomedByMenu</include>
 			<control type="grouplist" id="9001">
 				<visible>Container(9000).Hasfocus(1)</visible>

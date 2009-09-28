@@ -19,7 +19,7 @@
 			<ondown>3</ondown>
 			<orientation>vertical</orientation>
 			<include>Animation_ZoomedByMenu</include>
-			<include>Animation_CommonFadeNoHide</include>
+			<include>Animation_ZoomInZoomOut</include>
 		</control>
 
 		<control type="grouplist" id="5">
