@@ -431,9 +431,9 @@
 		</control>
 		<control type="image">
 			<posx>28</posx>
-			<posy>185</posy>
+			<posy>190</posy>
 			<width>430</width>
-			<height>310</height>
+			<height>300</height>
 			<fadetime>400</fadetime>
 			<aspectratio align="right" aligny="center">keep</aspectratio>
 			<texture>$INFO[Container(55).ListItem.Icon]</texture>
@@ -453,11 +453,11 @@
 			<include>Animation_ZoomedByMenu</include>
 			<include>Animation_HiddenByMusicInfo</include>
 			<include>Animation_CommonFade</include>
-			<visible>Control.IsVisible(55)+Player.HasMedia </visible>
+			<visible>Control.IsVisible(55)+Player.HasMedia</visible>
 		</control>
 		<control type="image">
 			<posx>28</posx>
-			<posy>125</posy>
+			<posy>105</posy>
 			<width>430</width>
 			<height>470</height>
 			<fadetime>400</fadetime>
@@ -472,7 +472,7 @@
 			<include>Animation_ZoomedByMenu</include>
 			<include>Animation_HiddenByMusicInfo</include>
 			<include>Animation_CommonFade</include>
-			<visible>Control.IsVisible(55)+!Player.HasMedia </visible>
+			<visible>Control.IsVisible(55)+!Player.HasMedia</visible>
 		</control>
 		<control type="group">
 			<visible>Control.IsVisible(55)</visible>
