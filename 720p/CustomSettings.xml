@@ -141,13 +141,26 @@
 					<font>Font_Settings</font>
 					<textcolor>ListTrackF</textcolor>
 					<focusedcolor>Black</focusedcolor>
-<!-- LOC -->		<label>Alt Home</label>
+<!-- LOC -->		<label>Home 2</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<onclick>Skin.ToggleSetting(althome)</onclick>
-					<selected>Skin.HasSetting(althome)</selected>
+					<onclick>Skin.ToggleSetting(home2)</onclick>
+					<onclick>Skin.Reset(home3)</onclick>
+					<selected>Skin.HasSetting(home2)</selected>
 				</control>
 				<control type="radiobutton" id="201">
+					<width>740</width>
+					<font>Font_Settings</font>
+					<textcolor>ListTrackF</textcolor>
+					<focusedcolor>Black</focusedcolor>
+<!-- LOC -->		<label>Home 3</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<onclick>Skin.ToggleSetting(home3)</onclick>
+					<onclick>Skin.Reset(home2)</onclick>
+					<selected>Skin.HasSetting(home3)</selected>
+				</control>
+				<control type="radiobutton" id="202">
 					<width>740</width>
 					<font>Font_Settings</font>
 					<textcolor>ListTrackF</textcolor>

@@ -10,6 +10,11 @@
 			<label>Home.xml</label>
 			<visible>Skin.HasSetting(debugmode)</visible>
 		</control>
+
+		<include condition="!Skin.HasSetting(home2) + !Skin.HasSetting(home3)">home1</include>
+		<include condition="Skin.HasSetting(home2)">home2</include>
+		<include condition="Skin.HasSetting(home3)">home3</include>
+
 		<control type="label">
 			<posx>-320</posx>
 			<posy>330</posy>
@@ -20,9 +25,24 @@
 			<font>Font_MainMenu</font>
 			<textcolor>MainMenu</textcolor>
 			<include>Animation_ZoomOutZoomIn</include>
+			<visible>!Skin.HasSetting(althome2)</visible>
 		</control>
-		<include condition="!Skin.HasSetting(althome)">home1</include>
-		<include condition="Skin.HasSetting(althome)">home2</include>
+
+		<control type="label">
+			<posx>-320</posx>
+			<posy>220</posy>
+			<width>1920</width>
+			<angle>0</angle>
+			<align>center</align>
+			<aligny>top</aligny>
+			<visible>Container(300).HasFocus(1) | Container(300).HasFocus(2) | Container(300).HasFocus(3) | Container(300).HasFocus(4) | Container(300).HasFocus(5) | Container(300).HasFocus(6) | Container(300).HasFocus(7) | Container(300).HasFocus(8)</visible>
+			<label>$INFO[Container(300).ListItem.Label]</label>
+			<font>Font_MainMenu</font>
+			<textcolor>MainMenu</textcolor>
+			<include>Animation_homebigfont</include>
+			<visible>Skin.HasSetting(althome2)</visible>
+		</control>
+		
 		<include>Global_ContextFilter</include>
 		<include>Global_Time</include>
 		<include>Global_RSS</include>

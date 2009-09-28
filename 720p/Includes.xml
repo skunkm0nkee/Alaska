@@ -42,26 +42,6 @@
 		<height>720</height>
 	</include>
 <!-- Global objects -->
-	<!--include name="Global_BackgroundFilter">
-		<control type="image">
-			<include>Dimensions_Fullscreen</include>
-			<texture>backdrops/background.png</texture>
-			<colordiffuse>ccFFFFFF</colordiffuse>
-			<animation effect="fade" start="0" end="100" time="200">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
-			<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
-		</control>
-		<control type="image">
-			<include>Dimensions_Fullscreen</include>
-			<texture>backdrops/backgroundcolordiffuse.png</texture>
-			<colordiffuse>backgroundColor</colordiffuse>
-			<animation effect="fade" start="0" end="100" time="200">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
-			<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
-		</control>
-	</include-->
 	<include name="Global_Background">
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
@@ -282,7 +262,7 @@
 				<aspectratio aligny="bottom">scale</aspectratio>
 			</control>
 	</include>
-<!-- Home -->
+<!-- Home V.1 -->
 	<include name="home1">
 		<control type="wraplist" id="300">
 			<posx>0</posx>
@@ -489,6 +469,7 @@
 			</control>
 		</control>
 	</include>
+<!-- Home V.2 -->
 	<include name="home2">
 		<control type="wraplist" id="300">
 			<posx>-131</posx>
@@ -612,9 +593,133 @@
 			<texture diffuse="mainmenu/home_mask.png">backdrops/background.png</texture>
 			<colordiffuse>a8FFFFFF</colordiffuse>
 		</control>
+
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<texture diffuse="mainmenu/home_mask.png">backdrops/backgroundcolordiffuse.png</texture>
+			<colordiffuse>backgroundColor</colordiffuse>
+		</control>
+	</include>
+<!-- Home V.3 -->
+	<include name="home3">
+		<control type="multiimage">
+		<include>Animation_homebackground</include>
+		<width>1280</width>
+		<height>720</height>
+		<posx>0</posx>
+		<posy>0</posy>
+		<timeperimage>20000</timeperimage>
+		<randomize>true</randomize>
+		<fadetime>400</fadetime>
+		<colordiffuse>55FFFFFF</colordiffuse>
+		<aspectratio align="center" scalediffuse="true">stretch</aspectratio>
+		<include>Animation_CommonFade</include>
+		<imagepath background="true">$INFO[Container(300).ListItem.Icon]</imagepath>
+		</control>
+		<control type="wraplist" id="300">
+			<posx>180</posx>
+			<posy>-20</posy>
+			<height>950</height>
+			<width>900</width>
+			<onup>300</onup>
+			<ondown>300</ondown>
+			<onleft>7000</onleft>
+			<onright>7000</onright>
+			<viewtype>list</viewtype>
+			<scrolltime>300</scrolltime>
+			<orientation>vertical</orientation>
+			<focusposition>3</focusposition>
+			<include>Animation_ZoomOutZoomIn</include>
+			<itemlayout width="400" height="110">
+				<control type="label">
+					<posx>450</posx>
+					<posy>0</posy>
+					<width>900</width>
+					<height>100</height>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>Font_HomeNotSelected</font>
+					<textcolor>Time</textcolor>
+					<selectedcolor>ListTitleNF</selectedcolor>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout width="900" height="110">
+				<control type="label">
+					<posx>450</posx>
+					<posy>0</posy>
+					<width>750</width>
+					<height>100</height>
+					<aligny>center</aligny>
+					<align>center</align>
+					<font>Font_HomeSelected</font>
+					<textcolor>ListTitleF</textcolor>
+					<selectedcolor>ListTitleF</selectedcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="500,0" start="51" end="100" time="600" tween="back" easing="out" />
+						<effect type="fade" start="0" end="100" time="600" />
+					</animation>
+				</control>
+			</focusedlayout>
+			<content>
+				<item id="1">
+					<label>PROGRAMS</label>
+					<icon>special://skin/media/backdrops/games/</icon>
+					<thumb>$INFO[Skin.String(CustomPictures)]</thumb>
+					<onclick>XBMC.ActivateWindow(MyPrograms)</onclick>
+				</item>
+				<item id="2">
+					<label>VIDEOS</label>
+					<icon>special://skin/media/backdrops/videos/</icon>
+					<thumb>$INFO[Skin.String(CustomVideos)]</thumb>
+					<onclick>XBMC.ActivateWindow(MyVideoFiles)</onclick>
+				</item>
+				<item id="3">
+					<label>MUSIC</label>
+					<icon>special://skin/media/backdrops/music/</icon>
+					<thumb>$INFO[Skin.String(CustomMusic)]</thumb>
+					<onclick>XBMC.ActivateWindow(MyMusic,return)</onclick>
+				</item>
+				<item id="4">
+					<label>MOVIES</label>
+					<icon>special://skin/media/backdrops/movies/</icon>
+					<thumb>$INFO[Skin.String(CustomMovies)]</thumb>
+					<onclick>XBMC.ActivateWindow(MyVideoLibrary,movietitles,return)</onclick>
+				</item>
+				<item id="5">
+					<label>TV SHOWS</label>
+					<icon>special://skin/media/backdrops/tvshows/</icon>
+					<thumb>$INFO[Skin.String(CustomTV)]</thumb>
+					<onclick>XBMC.ActivateWindow(MyVideoLibrary,tvshowtitles,return)</onclick>
+				</item>
+				<item id="6">
+					<label>PICTURES</label>
+					<icon>special://skin/media/backdrops/pictures/</icon>
+					<thumb>$INFO[Skin.String(CustomPictures)]</thumb>
+					<onclick>XBMC.ActivateWindow(MyPictures)</onclick>
+				</item>
+				<item id="7">
+					<label>WEATHER</label>
+					<icon>special://skin/media/backdrops/weather/</icon>
+					<thumb>$INFO[Skin.String(CustomWeather)]</thumb>
+					<onclick>XBMC.Activatewindow(2600)</onclick>
+				</item>
+				<item id="8">
+					<label>SETTINGS</label>
+					<icon>special://skin/media/backdrops/settings/</icon>
+					<thumb>$INFO[Skin.String(CustomSettings)]</thumb>
+					<onclick>XBMC.ActivateWindow(4)</onclick>
+				</item>
+			</content>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture diffuse="mainmenu/mask.png">backdrops/background.png</texture>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture diffuse="mainmenu/mask.png">backdrops/backgroundcolordiffuse.png</texture>
 			<colordiffuse>backgroundColor</colordiffuse>
 		</control>
 	</include>
