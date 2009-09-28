@@ -3,10 +3,10 @@
 <includes>
 	<include name="Viewtype_Files">
 		<control type="fixedlist" id="55">
-			<posx>490</posx>
+			<posx>480</posx>
 			<posy>10</posy>
 			<height>710</height>
-			<width>1250</width>
+			<width>800</width>
 			<onup>55</onup>
 			<ondown>55</ondown>
 			<onleft>7000</onleft>
@@ -18,11 +18,11 @@
 			<include>Animation_ZoomedByMenu</include>
 			<include>Animation_HiddenByInfo</include>
 			<include>Animation_HiddenByMusicInfo</include>
-			<itemlayout width="1210" height="40">
+			<itemlayout width="800" height="40">
 				<control type="label">
-					<posx>0</posx>
+					<posx>15</posx>
 					<posy>0</posy>
-					<width>750</width>
+					<width>735</width>
 					<height>40</height>
 					<aligny>center</aligny>
 					<font>Font_ListTitleNF</font>
@@ -31,9 +31,9 @@
 					<visible>!IsEmpty(ListItem.Duration) + !IsEmpty(ListItem.TrackNumber) + [Container.Content(songs) | Window.IsActive(500) | [ Window.IsActive(502)+!Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)]]</visible>
 				</control>
 				<control type="label">
-					<posx>0</posx>
+					<posx>15</posx>
 					<posy>0</posy>
-					<width>750</width>
+					<width>735</width>
 					<height>40</height>
 					<aligny>center</aligny>
 					<font>Font_ListTitleNF</font>
@@ -42,9 +42,9 @@
 					<visible>![Window.IsActive(25) | Window.IsActive(502) | Window.IsActive(501) | Window.IsActive(500)]</visible>
 				</control>
 				<control type="label">
-					<posx>0</posx>
+					<posx>15</posx>
 					<posy>0</posy>
-					<width>750</width>
+					<width>735</width>
 					<height>40</height>
 					<aligny>center</aligny>
 					<font>Font_ListTitleNF</font>
@@ -53,9 +53,9 @@
 					<visible>IsEmpty(ListItem.Title) + [Window.IsActive(25) | Window.IsActive(502)]</visible>
 				</control>
 				<control type="label">
-					<posx>0</posx>
+					<posx>15</posx>
 					<posy>0</posy>
-					<width>750</width>
+					<width>735</width>
 					<height>40</height>
 					<aligny>center</aligny>
 					<font>Font_ListTitleNF</font>
@@ -64,9 +64,9 @@
 					<visible>!IsEmpty(ListItem.Title) + Window.IsActive(25) + !Container.Content(episodes)</visible>
 				</control>
 				<control type="label">
-					<posx>0</posx>
+					<posx>15</posx>
 					<posy>0</posy>
-					<width>750</width>
+					<width>735</width>
 					<height>40</height>
 					<aligny>center</aligny>
 					<font>Font_ListTitleNF</font>
@@ -75,7 +75,7 @@
 					<visible>!IsEmpty(ListItem.Title) + Window.IsActive(25) + Container.Content(episodes)</visible>
 				</control>
 			</itemlayout>
-			<focusedlayout width="750" height="105">
+			<focusedlayout width="800" height="105">
 				<control type="label">
 					<posx>0</posx>
 					<posy>5</posy>
@@ -85,42 +85,44 @@
 					<font>Font_ListTitleBigger</font>
 					<textcolor>ListTitleF</textcolor>
 					<label>$INFO[ListItem.Label]</label>
-					<visible>[!Container.Content(artists)+!Container.Content(albums)+!Container.Content(songs)+!Container.Content(tvshows)+!Container.Content(seasons)+!Container.Content(episodes)]</visible>
+					<visible>[!Container.Content(movies)+!Container.Content(artists)+!Container.Content(albums)+!Container.Content(songs)+!Container.Content(tvshows)+!Container.Content(seasons)+!Container.Content(episodes)]</visible>
 				</control>
-				<!--control type="label">
-					<posx>0</posx>
-					<posy>8</posy>
-					<width>750</width>
-					<height>25</height>
-					<aligny>center</aligny>
-					<font>Font_ListTitleBig</font>
-					<textcolor>ListTitleF</textcolor>
-					<label>$INFO[ListItem.Title]</label>
-					<visible>!IsEmpty(ListItem.Title) + Window.IsActive(25) + !Container.Content(episodes)</visible>
-					<animation effect="slide" start="0,8" end="0,8" time="0" condition="Container.Content(tvshows)">Conditional</animation>
+			<!-- Movies -->
+				<control type="group">
+					<visible>Container.Content(movies)</visible>
+					<control type="label">
+						<posx>0</posx>
+						<posy>10</posy>
+						<width>750</width>
+						<height>20</height>
+						<aligny>center</aligny>
+						<font>Font_ListTitleBig</font>
+						<textcolor>ListTitleF</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<posx>0</posx>
+						<posy>35</posy>
+						<width>750</width>
+						<height>17</height>
+						<aligny>center</aligny>
+						<font>Font_ListDetail</font>
+						<textcolor>ListTitleF</textcolor>
+						<label>$INFO[ListItem.Genre]</label>
+						<visible>!IsEmpty(ListItem.Genre)</visible>
+					</control>
+					<control type="textbox">
+						<posx>0</posx>
+						<posy>50</posy>
+						<width>750</width>
+						<height>40</height>
+						<font>Font_EpisodePlot</font>
+						<textcolor>EpisodePlot</textcolor>
+						<label>$INFO[ListItem.Plot]</label>
+						<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+						<visible>!IsEmpty(ListItem.Plot)</visible>
+					</control>
 				</control>
-
-				<control type="label">
-					<posx>0</posx>
-					<posy>38</posy>
-					<width>750</width>
-					<height>17</height>
-					<aligny>center</aligny>
-					<font>Font_ListDetail</font>
-					<textcolor>ListTitleF</textcolor>
-					<label>$INFO[ListItem.Genre]</label>
-					<visible>!IsEmpty(ListItem.Genre) + Window.IsActive(25) + !Container.Content(seasons)</visible>
-					<animation effect="slide" start="0,8" end="0,8" time="0" condition="Container.Content(tvshows)">Conditional</animation>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>58</posy>
-					<width>121</width>
-					<height>22</height>
-					<texture>$INFO[ListItem.StarRating]</texture>
-					<visible>[Window.IsActive(25)+ ![Container.Content(seasons) | Container.Content(episodes)]]</visible>
-					<animation effect="slide" start="0,8" end="0,8" time="0" condition="Container.Content(tvshows)">Conditional</animation>
-				</control-->
 			<!-- TV Shows -->
 				<control type="group">
 					<visible>Container.Content(tvshows)</visible>
@@ -253,7 +255,6 @@
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
 				</control>
-		<!-- Music -->
 			<!-- Artist -->
 				<control type="group">
 					<visible>Container.Content(artists)</visible>
@@ -431,7 +432,7 @@
 		<control type="image">
 			<posx>28</posx>
 			<posy>185</posy>
-			<width>440</width>
+			<width>430</width>
 			<height>310</height>
 			<fadetime>400</fadetime>
 			<aspectratio align="right" aligny="center">keep</aspectratio>
@@ -451,7 +452,27 @@
 			<include>Animation_ZoomInZoomOut</include>
 			<include>Animation_ZoomedByMenu</include>
 			<include>Animation_HiddenByMusicInfo</include>
-			<visible>Control.IsVisible(55)</visible>
+			<include>Animation_CommonFade</include>
+			<visible>Control.IsVisible(55)+Player.HasMedia </visible>
+		</control>
+		<control type="image">
+			<posx>28</posx>
+			<posy>125</posy>
+			<width>430</width>
+			<height>470</height>
+			<fadetime>400</fadetime>
+			<aspectratio align="right" aligny="center">keep</aspectratio>
+			<texture>$INFO[Container(55).ListItem.Icon]</texture>
+			<bordertexture border="8">common/thumb_border.png</bordertexture>
+			<bordersize>8</bordersize>
+			<animation type="Conditional" condition="Window.IsActive(2003)">
+				<effect type="slide" start="0,0" end="40,-25" time="400" tween="cubic" easing="inout" />
+			</animation>
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_ZoomedByMenu</include>
+			<include>Animation_HiddenByMusicInfo</include>
+			<include>Animation_CommonFade</include>
+			<visible>Control.IsVisible(55)+!Player.HasMedia </visible>
 		</control>
 		<control type="group">
 			<visible>Control.IsVisible(55)</visible>
