@@ -8,6 +8,7 @@
 
 <!-- Global colours -->
 
+	<color name="backgroundColor">ff2d0606</color><!--FFEFC1D4-->
 	<color name="Time">bbffffff</color>
 	<color name="Date">ccb10000</color>
 	<color name="RSSBody">bbffffff</color>
@@ -62,8 +63,11 @@
 <!-- List colours -->
 
 	<color name="ListTrackNF">bbffffff</color>
-	<color name="ListTitleNF">FFc7c7c7</color>
+	<color name="ListTitleNF">88ffffff</color>
 	<color name="ListTrackF">bbffffff</color>
-	<color name="ListTitleF">FFc7c7c7</color>	
+	<color name="ListTitleF">FFc7c7c7</color>
+	
+<!-- wall colours -->
+	<color name="WallIconDiffuse">FF373737</color>
 
 </colors>

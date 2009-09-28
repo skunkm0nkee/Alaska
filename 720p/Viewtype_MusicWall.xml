@@ -48,6 +48,7 @@
 					<width>190</width>
 					<height>190</height>
 					<texture>wall/musicwallmatte.png</texture>
+					<colordiffuse>WallIconDiffuse</colordiffuse>
 				</control>
 				<control type="image">
 					<posx>17</posx>
@@ -56,7 +57,7 @@
 					<height>190</height>
 					<fadetime>200</fadetime>
 					<texture diffuse="wall/musicwallmatte.png">$INFO[ListItem.Icon]</texture>
-					<colordiffuse>48FFFFFF</colordiffuse>
+					<colordiffuse>WallIconDiffuse</colordiffuse>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 				</control>
 				<control type="image">
@@ -65,7 +66,7 @@
 					<width>192</width>
 					<height>192</height>
 					<texture>wall/musicwallframeNF.png</texture>
-					<colordiffuse>48FFFFFF</colordiffuse>					
+					<colordiffuse>WallIconDiffuse</colordiffuse>					
 				</control>				
 			</itemlayout>
 			<focusedlayout width="223" height="223">
@@ -75,6 +76,7 @@
 					<width>190</width>
 					<height>190</height>
 					<texture>wall/musicwallmatte.png</texture>
+					<colordiffuse>WallIconDiffuse</colordiffuse>
 					<animation type="Focus" reversible="false" condition="Container(50).Row(0)">
 						<effect type="slide" start="0,0" end="0,-20" time="400" tween="back" easing="out" />						
 					</animation>
@@ -108,7 +110,7 @@
 					<width>190</width>
 					<height>190</height>
 					<texture>wall/musicwallframeNF.png</texture>
-					<colordiffuse>48FFFFFF</colordiffuse>
+					<colordiffuse>WallIconDiffuse</colordiffuse>
 					<animation type="Focus" reversible="false" condition="Container(50).Row(0)">
 						<effect type="fade" start="100" end="0" time="200" />
 						<effect type="slide" start="0,0" end="0,-20" time="400" tween="back" easing="out" />						
