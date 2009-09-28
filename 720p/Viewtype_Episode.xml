@@ -1,11 +1,7 @@
 <!--Alaska-->
 
 <includes>
-
 	<include name="Viewtype_Episode">
-
-		<!-- Browser -->
-
 		<control type="list" id="51">
 			<viewtype label="31752">list</viewtype>
 			<animation effect="slide" start="55,0" end="55,0" time="0" condition="Player.HasVideo">Conditional</animation>
@@ -27,6 +23,17 @@
 				<control type="label">
 					<posx>100</posx>
 					<posy>0</posy>
+					<width>633</width>
+					<height>60</height>
+					<aligny>center</aligny>
+					<font>Font_ListTitleBigger</font>
+					<textcolor>ListTitleF</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<visible>IsEmpty(ListItem.Title)</visible>
+				</control>
+				<control type="label">
+					<posx>100</posx>
+					<posy>0</posy>
 					<width>55</width>
 					<height>60</height>
 					<align>right</align>
@@ -35,6 +42,7 @@
 					<font>Font_EpisodeNumber</font>
 					<textcolor>EpisodeNumber</textcolor>
 					<include>Animation_HiddenByInfo</include>
+					<visible>!IsEmpty(ListItem.Title)</visible>
 				</control>
 				<control type="label">
 					<posx>125</posx>
@@ -46,6 +54,7 @@
 					<font>Font_EpisodeTitleNF</font>
 					<textcolor>EpisodeNumber</textcolor>
 					<include>Animation_HiddenByInfo</include>
+					<visible>!IsEmpty(ListItem.Title)</visible>
 				</control>
 				<control type="label">
 					<posx>125</posx>
@@ -57,7 +66,8 @@
 					<font>Font_EpisodeDetailNF</font>
 					<textcolor>EpisodeNumber</textcolor>
 					<include>Animation_HiddenByInfo</include>
-				</control>				
+					<visible>!IsEmpty(ListItem.Title)</visible>
+				</control>
 			</itemlayout>
 			<focusedlayout width="633" height="164">
 				<control type="image">
@@ -71,7 +81,7 @@
 						<effect type="zoom" center="127,70" start="50" end="100" time="200" tween="cubic" easing="out" />
 						<effect type="fade" start="0" end="100" time="200" />
 					</animation>
-				</control>			
+				</control>
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -85,6 +95,17 @@
 				</control>
 				<control type="label">
 					<posx>292</posx>
+					<posy>0</posy>
+					<width>633</width>
+					<height>164</height>
+					<aligny>center</aligny>
+					<font>Font_ListTitleBigger</font>
+					<textcolor>ListTitleF</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+					<visible>IsEmpty(ListItem.Title)</visible>
+				</control>
+				<control type="label">
+					<posx>292</posx>
 					<posy>25</posy>
 					<width>633</width>
 					<label>$INFO[ListItem.Episode]. $INFO[ListItem.Title]</label>
@@ -93,7 +114,8 @@
 					<animation type="Focus" reversible="false">
 						<effect type="fade" start="0" end="100" time="200" />
 					</animation>
-					<include>Animation_HiddenByInfo</include>					
+					<include>Animation_HiddenByInfo</include>
+					<visible>!IsEmpty(ListItem.Title)</visible>
 				</control>
 				<control type="image">
 					<posx>14</posx>
@@ -115,17 +137,17 @@
 			<posx>559</posx>
 			<posy>172</posy>
 			<width>633</width>
-			<height>80</height>
+			<height>75</height>
 			<align>left</align>
 			<info>Container(51).ListItem.Plot</info>
 			<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 			<font>Font_EpisodePlot</font>
 			<textcolor>EpisodePlot</textcolor>
-			<include>Animation_ZoomInZoomOut</include>			
+			<include>Animation_ZoomInZoomOut</include>
 			<include>Animation_EpisodePlot</include>
 			<include>Animation_EpisodeFloat</include>
 			<include>Animation_HiddenByInfo</include>
-		</control>	
+		</control>
 
 	</include>
 
