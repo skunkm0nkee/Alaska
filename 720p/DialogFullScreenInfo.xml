@@ -32,32 +32,33 @@
 			</control>
 			<control type="group">
 				<posx>195</posx>
-				<posy>38</posy>
+				<posy>28</posy>
 				<animation effect="slide" start="130,0" end="130,0" time="0" tween="cubic" easing="out" condition="VideoPlayer.Content(episodes)">Conditional</animation>
 				<control type="label">
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>510</width>
-					<font>Font_NowPlayingTrack</font>
-					<label>$INFO[VideoPlayer.Title]</label>
+					<height>40</height>
+					<font>Font_PosterTitle</font>
+					<label>$INFO[VideoPlayer.Title] [COLOR OSDPlayingAlbum]$INFO[VideoPlayer.Year][/COLOR]</label>
 					<textcolor>NowPlayingTrack</textcolor>
 				</control>
 				<control type="label">
 					<posx>0</posx>
-					<posy>26</posy>
+					<posy>40</posy>
 					<width>510</width>
-					<font>Font_NowPlayingArtist</font>
+					<font>Font_ListDetail</font>
 					<label>[B]$INFO[VideoPlayer.Director][/B] $INFO[VideoPlayer.Year]</label>
 					<textcolor>NowPlayingArtist</textcolor>
 					<visible>!VideoPlayer.Content(episodes)</visible>
 				</control>
 				<control type="label">
 					<posx>0</posx>
-					<posy>26</posy>
+					<posy>40</posy>
 					<width>510</width>
-					<font>Font_NowPlayingArtist</font>
-					<label>[B]$INFO[VideoPlayer.TVShowTitle][/B]</label>
-					<textcolor>NowPlayingArtist</textcolor>
+				<textcolor>OSDPlayingTrack</textcolor>
+				<font>Font_NowPlayingTrack</font>
+					<label>$INFO[VideoPlayer.TVShowTitle]</label>
 					<visible>VideoPlayer.Content(episodes)</visible>
 				</control>
 			</control>
