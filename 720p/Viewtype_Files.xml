@@ -28,7 +28,7 @@
 					<font>Font_ListTitleNF</font>
 					<textcolor>ListTitleNF</textcolor>
 					<label>$INFO[ListItem.TrackNumber].$INFO[ListItem.Title] [COLOR Date]$INFO[ListItem.Duration][/COLOR]</label>
-					<visible>!IsEmpty(ListItem.Duration) + !IsEmpty(ListItem.TrackNumber) + [Container.Content(songs) | Window.IsActive(500) | [ Window.IsActive(502)+!Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)]]</visible>
+					<visible>!IsEmpty(ListItem.Duration) + !IsEmpty(ListItem.TrackNumber) + [Container.Content(songs) | Window.IsActive(500) | Window.IsActive(501) | [ Window.IsActive(502)+!Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)]]</visible>
 				</control>
 				<control type="label">
 					<posx>15</posx>
@@ -39,18 +39,7 @@
 					<font>Font_ListTitleNF</font>
 					<textcolor>ListTitleNF</textcolor>
 					<label>$INFO[ListItem.Label]</label>
-					<visible>![Window.IsActive(25) | Window.IsActive(502) | Window.IsActive(501) | Window.IsActive(500)]</visible>
-				</control>
-				<control type="label">
-					<posx>15</posx>
-					<posy>0</posy>
-					<width>735</width>
-					<height>40</height>
-					<aligny>center</aligny>
-					<font>Font_ListTitleNF</font>
-					<textcolor>ListTitleNF</textcolor>
-					<label>$INFO[ListItem.Label]</label>
-					<visible>IsEmpty(ListItem.Title) + [Window.IsActive(25) | Window.IsActive(502)]</visible>
+					<visible>IsEmpty(ListItem.Title)</visible>
 				</control>
 				<control type="label">
 					<posx>15</posx>
@@ -85,11 +74,22 @@
 					<font>Font_ListTitleBigger</font>
 					<textcolor>ListTitleF</textcolor>
 					<label>$INFO[ListItem.Label]</label>
-					<visible>[!Window.IsActive(1)+!Container.Content(movies)+!Container.Content(artists)+!Container.Content(albums)+!Container.Content(songs)+!Container.Content(tvshows)+!Container.Content(seasons)+!Container.Content(episodes)]</visible>
+					<visible>[!Window.IsActive(501)+!Window.IsActive(1)+!Container.Content(movies)+!Container.Content(artists)+!Container.Content(albums)+!Container.Content(songs)+!Container.Content(tvshows)+!Container.Content(seasons)+!Container.Content(episodes)]</visible>
 				</control>
 			<!-- Movies -->
 				<control type="group">
 					<visible>Container.Content(movies)</visible>
+					<control type="label">
+						<posx>0</posx>
+						<posy>5</posy>
+						<width>750</width>
+						<height>90</height>
+						<aligny>center</aligny>
+						<font>Font_ListTitleBigger</font>
+						<textcolor>ListTitleF</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>IsEmpty(ListItem.Title)</visible>
+					</control>
 					<control type="label">
 						<posx>0</posx>
 						<posy>10</posy>
@@ -98,7 +98,7 @@
 						<aligny>center</aligny>
 						<font>Font_ListTitleBig</font>
 						<textcolor>ListTitleF</textcolor>
-						<label>$INFO[ListItem.Label]</label>
+						<label>$INFO[ListItem.Title]</label>
 					</control>
 					<control type="label">
 						<posx>0</posx>
@@ -324,7 +324,7 @@
 				</control>
 			<!-- Song -->
 				<control type="group">
-					<visible>Container.Content(songs) | Window.IsActive(500) | [ Window.IsActive(502)+!Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)]</visible>
+					<visible>Container.Content(songs)| Window.IsActive(500) | Window.IsActive(501) | [ Window.IsActive(502)+!Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)]</visible>
 					<control type="label">
 						<posx>0</posx>
 						<posy>5</posy>
