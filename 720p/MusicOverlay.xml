@@ -45,10 +45,10 @@
 			<control type="label">
 				<visible>!Window.IsActive(2006)</visible>
 				<posx>175</posx>
-				<posy>99</posy>
+				<posy>143</posy>
 				<width>1034</width>
 				<font>Font_ListDetail</font>
-				<label>$INFO[MusicPlayer.Artist]</label>
+				<label>[B]$INFO[MusicPlayer.Artist][/B] $INFO[MusicPlayer.Album]</label>
 				<textcolor>NowPlayingArtist</textcolor>
 				<animation effect="fade" start="0" end="100" time="400" delay="400">Visible</animation>
 				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
@@ -56,10 +56,10 @@
 			<control type="label">
 				<visible>!Window.IsActive(2006)</visible>
 				<posx>175</posx>
-				<posy>143</posy>
+				<posy>99</posy>
 				<width>1034</width>
 				<font>Font_ListDetail</font>
-				<label>$INFO[MusicPlayer.Album]</label>
+				<label>[B]Now Playing[/B]</label>
 				<textcolor>NowPlayingArtist</textcolor>
 				<animation effect="fade" start="0" end="100" time="400" delay="400">Visible</animation>
 				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
@@ -70,7 +70,7 @@
 				<posy>121</posy>
 				<width>1034</width>
 				<font>Font_ListDetail</font>
-				<label>[B]$INFO[MusicPlayer.Title][/B]</label>
+				<label>$INFO[MusicPlayer.Title]</label>
 				<textcolor>NowPlayingTrack</textcolor>
 				<animation effect="fade" start="0" end="100" time="400" delay="400">Visible</animation>
 				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>

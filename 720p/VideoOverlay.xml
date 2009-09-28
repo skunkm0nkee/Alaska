@@ -19,6 +19,7 @@
 		</control>
 
 		<control type="group">
+			<animation effect="slide" start="0,0" end="0,30" time="200" condition="Skin.HasSetting(RSS_olny_on_home)+!Window.IsActive(home)+!Window.IsVisible(2006)">Conditional</animation>
 			<posx>30</posx>
 			<posy>490</posy>
 			<control type="image">
@@ -36,14 +37,17 @@
 				<width>276</width>
 				<height>150</height>
 			</control>
-			<control type="label">
+			<!--control type="label">
+				<visible>!Window.IsActive(2006)</visible>
 				<posx>300</posx>
-				<posy>120</posy>
+				<posy>10</posy>
 				<width>1034</width>
 				<font>Font_ListDetail</font>
-				<label>$INFO[VideoPlayer.Duration]/$INFO[VideoPlayer.TimeRemaining]</label>
-				<textcolor>NowPlayingTrack</textcolor>
-			</control>
+				<label>[B]Now Playing[/B]</label>
+				<textcolor>NowPlayingArtist</textcolor>
+				<animation effect="fade" start="0" end="100" time="400" delay="400">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+			</control-->
 			<control type="label">
 				<posx>300</posx>
 				<posy>140</posy>
@@ -52,6 +56,24 @@
 				<label>[B]$INFO[VideoPlayer.Title][/B]</label>
 				<textcolor>NowPlayingTrack</textcolor>
 			</control> 
+			<control type="label">
+				<posx>300</posx>
+				<posy>120</posy>
+				<width>1034</width>
+				<font>Font_ListDetail</font>
+				<label>$INFO[VideoPlayer.TVShowTitle]</label>
+				<textcolor>NowPlayingTrack</textcolor>
+				<visible>VideoPlayer.Content(episodes)</visible>
+			</control>
+			<control type="label">
+				<posx>300</posx>
+				<posy>120</posy>
+				<width>1034</width>
+				<font>Font_ListDetail</font>
+				<label>$INFO[VideoPlayer.Genre]</label>
+				<textcolor>NowPlayingTrack</textcolor>
+				<visible>!VideoPlayer.Content(episodes)</visible>
+			</control>
 		</control>
 
 		<include>Object_DebugGrid</include>
