@@ -513,7 +513,8 @@
 					<visible>!Skin.HasSetting(nomusic)</visible>
 				</item>
 				<item id="2">
-<!-- LOC -->		<label>Games</label>
+					<description>PROGRAMS</description>
+					<label>0</label>
 					<icon>special://skin/media/mainmenu/games.png</icon>
 					<onclick>XBMC.ActivateWindow(MyPrograms)</onclick>
 					<visible>!Skin.HasSetting(nogames)</visible>
@@ -664,49 +665,57 @@
 			</focusedlayout>
 			<content>
 				<item id="1">
-					<label>PROGRAMS</label>
+					<description>PROGRAMS</description>
+					<label>0</label>
 					<icon>special://skin/media/backdrops/games/</icon>
 					<thumb>$INFO[Skin.String(CustomPictures)]</thumb>
 					<onclick>XBMC.ActivateWindow(MyPrograms)</onclick>
 				</item>
 				<item id="2">
-					<label>VIDEOS</label>
+					<description>Video</description>
+					<label>3</label>
 					<icon>special://skin/media/backdrops/videos/</icon>
 					<thumb>$INFO[Skin.String(CustomVideos)]</thumb>
 					<onclick>XBMC.ActivateWindow(MyVideoFiles)</onclick>
 				</item>
 				<item id="3">
-					<label>MUSIC</label>
+					<description>Music</description>
+					<label>2</label>
 					<icon>special://skin/media/backdrops/music/</icon>
 					<thumb>$INFO[Skin.String(CustomMusic)]</thumb>
 					<onclick>XBMC.ActivateWindow(MyMusic,return)</onclick>
 				</item>
 				<item id="4">
-					<label>MOVIES</label>
+					<description>Movies</description>
+					<label>342</label>
 					<icon>special://skin/media/backdrops/movies/</icon>
 					<thumb>$INFO[Skin.String(CustomMovies)]</thumb>
 					<onclick>XBMC.ActivateWindow(MyVideoLibrary,movietitles,return)</onclick>
 				</item>
 				<item id="5">
-					<label>TV SHOWS</label>
+					<description>Tv Shows</description>
+					<label>20343</label>
 					<icon>special://skin/media/backdrops/tvshows/</icon>
 					<thumb>$INFO[Skin.String(CustomTV)]</thumb>
 					<onclick>XBMC.ActivateWindow(MyVideoLibrary,tvshowtitles,return)</onclick>
 				</item>
 				<item id="6">
-					<label>PICTURES</label>
+					<description>Picture</description>
+					<label>1</label>
 					<icon>special://skin/media/backdrops/pictures/</icon>
 					<thumb>$INFO[Skin.String(CustomPictures)]</thumb>
 					<onclick>XBMC.ActivateWindow(MyPictures)</onclick>
 				</item>
 				<item id="7">
-					<label>WEATHER</label>
+					<description>Weather</description>
+					<label>8</label>
 					<icon>special://skin/media/backdrops/weather/</icon>
 					<thumb>$INFO[Skin.String(CustomWeather)]</thumb>
 					<onclick>XBMC.Activatewindow(2600)</onclick>
 				</item>
 				<item id="8">
-					<label>SETTINGS</label>
+					<description>Settings</description>
+					<label>5</label>
 					<icon>special://skin/media/backdrops/settings/</icon>
 					<thumb>$INFO[Skin.String(CustomSettings)]</thumb>
 					<onclick>XBMC.ActivateWindow(4)</onclick>
