@@ -25,6 +25,7 @@
 			<font>Font_MainMenu</font>
 			<textcolor>MainMenu</textcolor>
 			<include>Animation_ZoomOutZoomIn</include>
+			<include>Animation_ZoomedByMenu</include>
 			<visible>!Skin.HasSetting(althome2)</visible>
 		</control>
 
@@ -40,6 +41,7 @@
 			<font>Font_MainMenu</font>
 			<textcolor>MainMenu</textcolor>
 			<include>Animation_homebigfont</include>
+			<include>Animation_ZoomedByMenu</include>
 			<visible>Skin.HasSetting(althome2)</visible>
 		</control>
 		

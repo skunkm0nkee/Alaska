@@ -304,7 +304,6 @@
 				</item>
 			</content>
 		</control>
-
 		<control type="group">
 			<posx>-600</posx>
 			<posy>170</posy>
@@ -482,6 +481,7 @@
 			<orientation>horizontal</orientation>
 			<focusposition>2</focusposition>
 			<scrolltime>200</scrolltime>
+			<include>Animation_ZoomedByMenu</include>
 			<include>Animation_ZoomOutZoomIn</include>
 			<itemlayout width="300" height="341">
 				<control type="image">
@@ -593,7 +593,6 @@
 			<texture diffuse="mainmenu/home_mask.png">backdrops/background.png</texture>
 			<colordiffuse>a8FFFFFF</colordiffuse>
 		</control>
-
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<texture diffuse="mainmenu/home_mask.png">backdrops/backgroundcolordiffuse.png</texture>
@@ -629,6 +628,7 @@
 			<scrolltime>300</scrolltime>
 			<orientation>vertical</orientation>
 			<focusposition>3</focusposition>
+			<include>Animation_ZoomedByMenu</include>
 			<include>Animation_ZoomOutZoomIn</include>
 			<itemlayout width="400" height="110">
 				<control type="label">
