@@ -85,7 +85,7 @@
 					<font>Font_ListTitleBigger</font>
 					<textcolor>ListTitleF</textcolor>
 					<label>$INFO[ListItem.Label]</label>
-					<visible>[!Container.Content(movies)+!Container.Content(artists)+!Container.Content(albums)+!Container.Content(songs)+!Container.Content(tvshows)+!Container.Content(seasons)+!Container.Content(episodes)]</visible>
+					<visible>[!Window.IsActive(1)+!Container.Content(movies)+!Container.Content(artists)+!Container.Content(albums)+!Container.Content(songs)+!Container.Content(tvshows)+!Container.Content(seasons)+!Container.Content(episodes)]</visible>
 				</control>
 			<!-- Movies -->
 				<control type="group">
@@ -240,7 +240,7 @@
 						<width>750</width>
 						<height>25</height>
 						<aligny>center</aligny>
-						<font>Font_ListTitleBigger</font>
+						<font>Font_ListTitleBig</font>
 						<textcolor>ListTitleF</textcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<animation effect="slide" start="0,-15" end="0,-15" time="0" condition="!IsEmpty(ListItem.Label2)">Conditional</animation>
