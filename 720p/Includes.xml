@@ -57,14 +57,14 @@
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<texture>backdrops/background.png</texture>
-			<animation effect="fade" start="100" end="90" time="400" condition="[!IsEmpty(ListItem.Property(Fanart_Image)) + !Window.Next(Home)]">Conditional</animation>
+			<animation effect="fade" start="100" end="80" time="400" condition="[!IsEmpty(ListItem.Property(Fanart_Image)) + !Window.Next(Home)]">Conditional</animation>
 			<animation effect="fade" start="100" end="80" time="400" condition="[Window.IsActive(2) + [substring(listitem.filenameandpath,jpg) | substring(listitem.filenameandpath,bmp) | substring(listitem.filenameandpath,png) | substring(listitem.filenameandpath,tif) | substring(listitem.filenameandpath,ico) | substring(listitem.filenameandpath,pcx) | substring(listitem.filenameandpath,tga)] + !Window.Next(Home)]">Conditional</animation>
 		</control>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<texture>backdrops/backgroundcolordiffuse.png</texture>
 			<colordiffuse>backgroundColor</colordiffuse>
-			<animation effect="fade" start="100" end="90" time="400" condition="[!IsEmpty(ListItem.Property(Fanart_Image)) + !Window.Next(Home)]">Conditional</animation>
+			<animation effect="fade" start="100" end="80" time="400" condition="[!IsEmpty(ListItem.Property(Fanart_Image)) + !Window.Next(Home)]">Conditional</animation>
 			<animation effect="fade" start="100" end="80" time="400" condition="[Window.IsActive(2) + [substring(listitem.filenameandpath,jpg) | substring(listitem.filenameandpath,bmp) | substring(listitem.filenameandpath,png) | substring(listitem.filenameandpath,tif) | substring(listitem.filenameandpath,ico) | substring(listitem.filenameandpath,pcx) | substring(listitem.filenameandpath,tga)] + !Window.Next(Home)]">Conditional</animation>
 		</control>
 	</include>

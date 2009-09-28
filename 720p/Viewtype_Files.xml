@@ -420,12 +420,12 @@
 		</control>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
-			<texture diffuse="list/list_mask_1.png">backdrops/background.png</texture>
+			<texture diffuse="list/list_mask_5.png">backdrops/background.png</texture>
 			<visible>Control.IsVisible(55)</visible>
 		</control>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
-			<texture diffuse="list/list_mask_1.png">backdrops/backgroundcolordiffuse.png</texture>
+			<texture diffuse="list/list_mask_5.png">backdrops/backgroundcolordiffuse.png</texture>
 			<colordiffuse>backgroundColor</colordiffuse>
 			<visible>Control.IsVisible(55)</visible>
 		</control>
