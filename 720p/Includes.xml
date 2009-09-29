@@ -262,8 +262,8 @@
 				<aspectratio aligny="bottom">scale</aspectratio>
 			</control>
 	</include>
-<!-- Home V.1 -->
-	<include name="home1">
+<!-- Home -->
+	<include name="Home_MenuImage">
 		<control type="wraplist" id="300">
 			<posx>0</posx>
 			<posy>0</posy>
@@ -277,32 +277,7 @@
 			</itemlayout>
 			<focusedlayout width="2" height="2">
 			</focusedlayout>
-			<content>
-				<item id="1">
-					<onclick>XBMC.ActivateWindow(MyPrograms)</onclick>
-				</item>
-				<item id="2">
-					<onclick>XBMC.ActivateWindow(MyVideoFiles)</onclick>
-				</item>
-				<item id="3">
-					<onclick>XBMC.ActivateWindow(MyMusic,return)</onclick>
-				</item>
-				<item id="4">
-					<onclick>XBMC.ActivateWindow(MyVideoLibrary,movietitles,return)</onclick>
-				</item>
-				<item id="5">
-					<onclick>XBMC.ActivateWindow(MyVideoLibrary,tvshowtitles,return)</onclick>
-				</item>
-				<item id="6">
-					<onclick>XBMC.ActivateWindow(MyPictures)</onclick>
-				</item>
-				<item id="7">
-					<onclick>XBMC.Activatewindow(2600)</onclick>
-				</item>
-				<item id="8">
-					<onclick>XBMC.ActivateWindow(4)</onclick>
-				</item>
-			</content>
+			<include>Home_MenuContent</include>
 		</control>
 		<control type="group">
 			<posx>-600</posx>
@@ -311,21 +286,22 @@
 			<include>Animation_ZoomOutZoomIn</include>
 			<include>Animation_ZoomedByMenu</include>
 			<control type="group">
+				<description>PROGRAMS</description>
 				<posx>0</posx>
 				<posy>0</posy>
 				<animation type="conditional" condition="!Container(300).HasFocus(1)">
 					<effect type="zoom" center="185,160" tween="cubic" easing="in" time="200" start="100" end="80" />
 				</animation>
 				<control type="multiimage">
-					<include>Object_MainMenuIconF</include>
+					<include>Home_MainMenuIconF</include>
 					<imagepath diffuse="mainmenu/homematte.png" fallback="special://skin/media/backdrops/games//" >$INFO[Skin.String(CustomGames)]</imagepath>
 				</control>
-				<include>Object_MainMenuFrame</include>
+				<include>Home_MainMenuFrame</include>
 				<control type="label">
-					<include>Object_MainMenuLabel</include>
-<!-- LOC -->		<label>Games</label>
+					<include>Home_MainMenuLabel</include>
+					<label>0</label>
 				</control>
-				<include>Object_MainMenuShade</include>
+				<include>Home_MainMenuShade</include>
 			</control>
 
 			<control type="group">
@@ -336,15 +312,15 @@
 					<effect type="zoom" center="535,160" tween="cubic" easing="in" time="200" start="100" end="80" />
 				</animation>
 				<control type="multiimage">
-					<include>Object_MainMenuIconF</include>
+					<include>Home_MainMenuIconF</include>
 					<imagepath diffuse="mainmenu/homematte.png" fallback="special://skin/media/backdrops/videos//">$INFO[Skin.String(CustomVideos)]</imagepath>
 				</control>
-				<include>Object_MainMenuFrame</include>
+				<include>Home_MainMenuFrame</include>
 				<control type="label">
-					<include>Object_MainMenuLabel</include>
+					<include>Home_MainMenuLabel</include>
 					<label>3</label>
 				</control>
-				<include>Object_MainMenuShade</include>
+				<include>Home_MainMenuShade</include>
 			</control>
 
 			<control type="group">
@@ -355,15 +331,15 @@
 					<effect type="zoom" center="885,160" tween="cubic" easing="in" time="200" start="100" end="80" />
 				</animation>
 				<control type="multiimage">
-					<include>Object_MainMenuIconF</include>
+					<include>Home_MainMenuIconF</include>
 					<imagepath diffuse="mainmenu/homematte.png" fallback="special://skin/media/backdrops/music//">$INFO[Skin.String(CustomMusic)]</imagepath>
 				</control>
-				<include>Object_MainMenuFrame</include>
+				<include>Home_MainMenuFrame</include>
 				<control type="label">
-					<include>Object_MainMenuLabel</include>
+					<include>Home_MainMenuLabel</include>
 					<label>2</label>
 				</control>
-				<include>Object_MainMenuShade</include>
+				<include>Home_MainMenuShade</include>
 			</control>
 
 			<control type="group">
@@ -374,15 +350,15 @@
 					<effect type="zoom" center="1235,160" tween="cubic" easing="in" time="200" start="100" end="80" />
 				</animation>
 				<control type="multiimage">
-					<include>Object_MainMenuIconF</include>
+					<include>Home_MainMenuIconF</include>
 					<imagepath diffuse="mainmenu/homematte.png" fallback="special://skin/media/backdrops/movies//">$INFO[Skin.String(CustomMovies)]</imagepath>
 				</control>
-				<include>Object_MainMenuFrame</include>
+				<include>Home_MainMenuFrame</include>
 				<control type="label">
-					<include>Object_MainMenuLabel</include>
+					<include>Home_MainMenuLabel</include>
 					<label>342</label>
 				</control>
-				<include>Object_MainMenuShade</include>
+				<include>Home_MainMenuShade</include>
 			</control>
 
 			<control type="group">
@@ -393,15 +369,15 @@
 					<effect type="zoom" center="1585,160" tween="cubic" easing="in" time="200" start="100" end="80" />
 				</animation>
 				<control type="multiimage">
-					<include>Object_MainMenuIconF</include>
+					<include>Home_MainMenuIconF</include>
 					<imagepath diffuse="mainmenu/homematte.png" fallback="special://skin/media/backdrops/tvshows//">$INFO[Skin.String(CustomTV)]</imagepath>
 				</control>
-				<include>Object_MainMenuFrame</include>
+				<include>Home_MainMenuFrame</include>
 				<control type="label">
-					<include>Object_MainMenuLabel</include>
+					<include>Home_MainMenuLabel</include>
 					<label>20343</label>
 				</control>
-				<include>Object_MainMenuShade</include>
+				<include>Home_MainMenuShade</include>
 			</control>
 
 			<control type="group">
@@ -412,15 +388,15 @@
 					<effect type="zoom" center="1935,160" tween="cubic" easing="in" time="200" start="100" end="80" />
 				</animation>
 				<control type="multiimage">
-					<include>Object_MainMenuIconF</include>
+					<include>Home_MainMenuIconF</include>
 					<imagepath diffuse="mainmenu/homematte.png" fallback="special://skin/media/backdrops/pictures//">$INFO[Skin.String(CustomPictures)]</imagepath>
 				</control>
-				<include>Object_MainMenuFrame</include>
+				<include>Home_MainMenuFrame</include>
 				<control type="label">
-					<include>Object_MainMenuLabel</include>
+					<include>Home_MainMenuLabel</include>
 					<label>1</label>
 				</control>
-				<include>Object_MainMenuShade</include>
+				<include>Home_MainMenuShade</include>
 			</control>
 
 			<control type="group">
@@ -431,21 +407,21 @@
 					<effect type="zoom" center="2285,160" tween="cubic" easing="in" time="200" start="100" end="80" />
 				</animation>
 				<control type="multiimage">
-					<include>Object_MainMenuIconF</include>
+					<include>Home_MainMenuIconF</include>
 					<imagepath diffuse="mainmenu/homematte.png" fallback="special://skin/media/backdrops/weather//">$INFO[Skin.String(CustomWeather)]</imagepath>
 					<visible>!Skin.HasSetting(homeweather)</visible>
 				</control>
 				<control type="multiimage">
-					<include>Object_MainMenuIconF</include>
+					<include>Home_MainMenuIconF</include>
 					<imagepath diffuse="mainmenu/homematte.png" fallback="special://skin/media/mainmenu/weather/weather.png">mainmenu/weather/$INFO[Weather.FanartCode]/</imagepath>
 					<visible>Skin.HasSetting(homeweather)</visible>
 				</control>
-				<include>Object_MainMenuFrame</include>
+				<include>Home_MainMenuFrame</include>
 				<control type="label">
-					<include>Object_MainMenuLabel</include>
+					<include>Home_MainMenuLabel</include>
 					<label>8</label>
 				</control>
-				<include>Object_MainMenuShade</include>
+				<include>Home_MainMenuShade</include>
 			</control>
 
 			<control type="group">
@@ -456,20 +432,19 @@
 					<effect type="zoom" center="2635,160" tween="cubic" easing="in" time="200" start="100" end="80" />
 				</animation>
 				<control type="multiimage">
-					<include>Object_MainMenuIconF</include>
+					<include>Home_MainMenuIconF</include>
 					<imagepath diffuse="mainmenu/homematte.png" fallback="special://skin/media/backdrops/settings//">$INFO[Skin.String(CustomSettings)]</imagepath>
 				</control>
-				<include>Object_MainMenuFrame</include>
+				<include>Home_MainMenuFrame</include>
 				<control type="label">
-					<include>Object_MainMenuLabel</include>
+					<include>Home_MainMenuLabel</include>
 					<label>5</label>
 				</control>
-				<include>Object_MainMenuShade</include>
+				<include>Home_MainMenuShade</include>
 			</control>
 		</control>
 	</include>
-<!-- Home V.2 -->
-	<include name="home2">
+	<include name="Home_MenuIcon">
 		<control type="wraplist" id="300">
 			<posx>-131</posx>
 			<posy>130</posy>
@@ -600,8 +575,7 @@
 			<colordiffuse>backgroundColor</colordiffuse>
 		</control>
 	</include>
-<!-- Home V.3 -->
-	<include name="home3">
+	<include name="Home_MenuList">
 		<control type="multiimage">
 		<include>Animation_homebackground</include>
 		<width>1280</width>
@@ -663,6 +637,19 @@
 					</animation>
 				</control>
 			</focusedlayout>
+			<include>Home_MenuContent</include>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture diffuse="mainmenu/mask.png">backdrops/background.png</texture>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture diffuse="mainmenu/mask.png">backdrops/backgroundcolordiffuse.png</texture>
+			<colordiffuse>backgroundColor</colordiffuse>
+		</control>
+	</include>
+	<include name="Home_MenuContent">
 			<content>
 				<item id="1">
 					<description>PROGRAMS</description>
@@ -720,19 +707,35 @@
 					<thumb>$INFO[Skin.String(CustomSettings)]</thumb>
 					<onclick>XBMC.ActivateWindow(4)</onclick>
 				</item>
+				<!--item id="9">
+					<description>Scripts</description>
+					<label>31020</label>
+					<onclick>XBMC.ActivateWindow(20)</onclick>
+					<visible>Skin.HasSetting(scripts)</visible>
+				</item>
+				<item id="10">
+					<description>Play Disc</description>
+					<label>31018</label>
+					<icon>special://skin/media/mainmenu/playdisc.png</icon>
+					<onclick>XBMC.PlayDVD</onclick>
+					<visible>System.HasMediadvd</visible>
+				</item>
+				<item id="12">
+					<description>SignOut</description>
+					<label>31209</label>
+					<onclick>System.LogOff</onclick>
+					<visible>Skin.HasSetting(signout)</visible>
+				</item>
+				<item id="13">
+					<description>Shutdown</description>
+					<label>31019</label>
+					<icon>special://skin/media/mainmenu/shutdown.png</icon>
+					<onclick>XBMC.Shutdown()</onclick>
+					<visible>false</visible>
+				</item-->
 			</content>
-		</control>
-		<control type="image">
-			<include>Dimensions_Fullscreen</include>
-			<texture diffuse="mainmenu/mask.png">backdrops/background.png</texture>
-		</control>
-		<control type="image">
-			<include>Dimensions_Fullscreen</include>
-			<texture diffuse="mainmenu/mask.png">backdrops/backgroundcolordiffuse.png</texture>
-			<colordiffuse>backgroundColor</colordiffuse>
-		</control>
 	</include>
-	<include name="Object_MainMenuIconF">
+	<include name="Home_MainMenuIconF">
 		<width>349</width>
 		<height>260</height>
 		<posx>10</posx>
@@ -744,7 +747,7 @@
 		<animation effect="fade" start="0" end="100" time="400" delay="10000">Visible</animation>
 		<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
 	</include>
-	<include name="Object_MainMenuShade">
+	<include name="Home_MainMenuShade">
 		<control type="image">
 			<posx>10</posx>
 			<posy>264</posy>
@@ -753,7 +756,7 @@
 			<texture>mainmenu/homeshade.png</texture>
 		</control>
 	</include>
-	<include name="Object_MainMenuFrame">
+	<include name="Home_MainMenuFrame">
 		<control type="image">
 			<width>370</width>
 			<height>320</height>
@@ -762,7 +765,7 @@
 			<texture>mainmenu/frame.png</texture>
 		</control>
 	</include>
-	<include name="Object_MainMenuBacking">
+	<include name="Home_MainMenuBacking">
 		<control type="image">
 			<width>10</width>
 			<height>246</height>
@@ -771,7 +774,7 @@
 			<texture>mainmenu/homebacking.png</texture>
 		</control>
 	</include>
-	<include name="Object_MainMenuLabel">
+	<include name="Home_MainMenuLabel">
 		<posx>345</posx>
 		<posy>286</posy>
 		<width>280</width>
@@ -780,7 +783,7 @@
 		<font>Font_MainMenuLabel</font>
 		<textcolor>MainMenuLabel</textcolor>
 	</include>
-	<include name="Object_MainMenuLabelBig">
+	<include name="Home_MainMenuLabelBig">
 		<posx>-610</posx>
 		<posy>200</posy>
 		<height>200</height>
