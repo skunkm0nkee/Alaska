@@ -5,238 +5,242 @@
 	<allowoverlay>yes</allowoverlay>
 	<controls>
 		<include>Global_Background</include>
-		<control type="list" id="9000">
-			<description>List</description>
-			<posx>150</posx>
-			<posy>175</posy>
-			<width>300</width>
-			<height>480</height>
-			<onleft>9010</onleft>
-			<onright>9010</onright>
-			<onup>9000</onup>
-			<ondown>9000</ondown>
-			<include>Animation_ZoomInZoomOut</include>
+		<control type="group">
+			<posy>0</posy>
+			<posx>0</posx>
+			<width>1280</width>
+			<height>720</height>
+			<include>Animation_ZoomOutZoomIn</include>
 			<include>Animation_ZoomedByMenu</include>
-			<itemlayout height="34" width="300">
-				<control type="label">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>300</width>
-					<font>Font_Settings</font>
-					<textcolor>ListTrackF</textcolor>
-					<align>left</align>
-					<label>$INFO[ListItem.Label]</label>
-				</control>
-			</itemlayout>
-			<focusedlayout height="34" width="300">
-				<control type="label">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>300</width>
-					<font>Font_Settings</font>
-					<textcolor>Black</textcolor>
-					<align>left</align>
-					<label>$INFO[ListItem.Label]</label>
-				</control>
-			</focusedlayout>
-			<content>
-				<item id="1">
-					<description>General</description>
-					<label>128</label>
-					<onclick>SetFocus(9001)</onclick>
-				</item>
-				<item id="2">
-					<description>Home</description>
-					<label>10000</label>
-					<onclick>SetFocus(9002)</onclick>
-				</item>
-				<item id="3">
-<!-- LOC -->		<description>Views</description>
-					<label>Views</label>
-					<onclick>SetFocus(9003)</onclick>
-				</item>
-				<item id="4">
-<!-- LOC -->		<description>Backdrops</description>
-					<label>Backdrops</label>
-					<onclick>SetFocus(9004)</onclick>
-				</item>
-				<item id="5">
-<!-- LOC -->		<description>Misc.</description>
-					<label>Misc.</label>
-					<onclick>SetFocus(9005)</onclick>
-				</item>
-			</content>
-		</control>
-		<control type="group" id="9010">
-			<posy>175</posy>
-			<posx>360</posx>
-			<include>Animation_ZoomInZoomOut</include>
-			<include>Animation_ZoomedByMenu</include>
-			<control type="grouplist" id="9001">
-				<visible>Container(9000).Hasfocus(1)</visible>
-				<width>740</width>
-				<height>600</height>
-				<itemgap>6</itemgap>
-				<onleft>9000</onleft>
-				<onright>9000</onright>
-				<onup>9001</onup>
-				<ondown>9001</ondown>
-				<include>Animation_CommonFadeNoHide</include>
-				<control type="radiobutton" id="100">
-					<width>740</width>
-					<font>Font_Settings</font>
-					<textcolor>ListTrackF</textcolor>
-					<focusedcolor>Black</focusedcolor>
-<!-- LOC -->		<label>Scroll Plot</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<onclick>Skin.ToggleSetting(autoscroll)</onclick>
-					<selected>Skin.HasSetting(autoscroll)</selected>
-				</control>
-				<control type="radiobutton" id="101">
-					<width>740</width>
-					<font>Font_Settings</font>
-					<textcolor>ListTrackF</textcolor>
-					<focusedcolor>Black</focusedcolor>
-<!-- LOC -->		<label>Media Flags</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<onclick>Skin.ToggleSetting(mediaflagson)</onclick>
-					<selected>Skin.HasSetting(mediaflagson)</selected>
-				</control>
-				<control type="radiobutton" id="102">
-					<width>740</width>
-					<font>Font_Settings</font>
-					<textcolor>ListTrackF</textcolor>
-					<focusedcolor>Black</focusedcolor>
-<!-- LOC -->		<label>Larger RSS</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<onclick>Skin.ToggleSetting(largeRSS)</onclick>
-					<selected>Skin.HasSetting(largeRSS)</selected>
-				</control>
-				<control type="radiobutton" id="103">
-					<width>740</width>
-					<font>Font_Settings</font>
-					<textcolor>ListTrackF</textcolor>
-					<focusedcolor>Black</focusedcolor>
-<!-- LOC -->		<label>only show RSS on home screen</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<onclick>Skin.ToggleSetting(RSS_olny_on_home)</onclick>
-					<selected>Skin.HasSetting(RSS_olny_on_home)</selected>
-				</control>
+			<control type="list" id="9000">
+				<description>List</description>
+				<posx>150</posx>
+				<posy>175</posy>
+				<width>300</width>
+				<height>480</height>
+				<onleft>9010</onleft>
+				<onright>9010</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<itemlayout height="34" width="300">
+					<control type="label">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>300</width>
+						<font>Font_Settings</font>
+						<textcolor>ListTrackF</textcolor>
+						<align>left</align>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="34" width="300">
+					<control type="label">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>300</width>
+						<font>Font_Settings</font>
+						<textcolor>Black</textcolor>
+						<align>left</align>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="1">
+						<description>General</description>
+						<label>128</label>
+						<onclick>SetFocus(9001)</onclick>
+					</item>
+					<item id="2">
+						<description>Home</description>
+						<label>10000</label>
+						<onclick>SetFocus(9002)</onclick>
+					</item>
+					<item id="3">
+	<!-- LOC -->		<description>Views</description>
+						<label>Views</label>
+						<onclick>SetFocus(9003)</onclick>
+					</item>
+					<item id="4">
+	<!-- LOC -->		<description>Backdrops</description>
+						<label>Backdrops</label>
+						<onclick>SetFocus(9004)</onclick>
+					</item>
+					<item id="5">
+	<!-- LOC -->		<description>Misc.</description>
+						<label>Misc.</label>
+						<onclick>SetFocus(9005)</onclick>
+					</item>
+				</content>
 			</control>
-			<control type="grouplist" id="9002">
-				<visible>Container(9000).Hasfocus(2)</visible>
-				<width>740</width>
-				<height>600</height>
-				<itemgap>6</itemgap>
-				<onleft>9000</onleft>
-				<onright>9000</onright>
-				<onup>9002</onup>
-				<ondown>9002</ondown>
-				<include>Animation_CommonFadeNoHide</include>
-				<control type="radiobutton" id="200">
+			<control type="group" id="9010">
+				<posy>175</posy>
+				<posx>360</posx>
+				<control type="grouplist" id="9001">
+					<visible>Container(9000).Hasfocus(1)</visible>
 					<width>740</width>
-					<font>Font_Settings</font>
-					<textcolor>ListTrackF</textcolor>
-					<focusedcolor>Black</focusedcolor>
-<!-- LOC -->		<label>Home 2</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<onclick>Skin.ToggleSetting(home2)</onclick>
-					<onclick>Skin.Reset(home3)</onclick>
-					<selected>Skin.HasSetting(home2)</selected>
+					<height>600</height>
+					<itemgap>6</itemgap>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>9001</onup>
+					<ondown>9001</ondown>
+					<include>Animation_CommonFadeNoHide</include>
+					<control type="radiobutton" id="100">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>ListTrackF</textcolor>
+						<focusedcolor>Black</focusedcolor>
+	<!-- LOC -->		<label>Scroll Plot</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(autoscroll)</onclick>
+						<selected>Skin.HasSetting(autoscroll)</selected>
+					</control>
+					<control type="radiobutton" id="101">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>ListTrackF</textcolor>
+						<focusedcolor>Black</focusedcolor>
+	<!-- LOC -->		<label>Media Flags</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(mediaflagson)</onclick>
+						<selected>Skin.HasSetting(mediaflagson)</selected>
+					</control>
+					<control type="radiobutton" id="102">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>ListTrackF</textcolor>
+						<focusedcolor>Black</focusedcolor>
+	<!-- LOC -->		<label>Larger RSS</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(largeRSS)</onclick>
+						<selected>Skin.HasSetting(largeRSS)</selected>
+					</control>
+					<control type="radiobutton" id="103">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>ListTrackF</textcolor>
+						<focusedcolor>Black</focusedcolor>
+	<!-- LOC -->		<label>only show RSS on home screen</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(RSS_olny_on_home)</onclick>
+						<selected>Skin.HasSetting(RSS_olny_on_home)</selected>
+					</control>
 				</control>
-				<control type="radiobutton" id="201">
+				<control type="grouplist" id="9002">
+					<visible>Container(9000).Hasfocus(2)</visible>
 					<width>740</width>
-					<font>Font_Settings</font>
-					<textcolor>ListTrackF</textcolor>
-					<focusedcolor>Black</focusedcolor>
-<!-- LOC -->		<label>Home 3</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<onclick>Skin.ToggleSetting(home3)</onclick>
-					<onclick>Skin.Reset(home2)</onclick>
-					<selected>Skin.HasSetting(home3)</selected>
+					<height>600</height>
+					<itemgap>6</itemgap>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>9002</onup>
+					<ondown>9002</ondown>
+					<include>Animation_CommonFadeNoHide</include>
+					<control type="radiobutton" id="200">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>ListTrackF</textcolor>
+						<focusedcolor>Black</focusedcolor>
+	<!-- LOC -->		<label>Home 2</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(home2)</onclick>
+						<onclick>Skin.Reset(home3)</onclick>
+						<selected>Skin.HasSetting(home2)</selected>
+					</control>
+					<control type="radiobutton" id="201">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>ListTrackF</textcolor>
+						<focusedcolor>Black</focusedcolor>
+	<!-- LOC -->		<label>Home 3</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(home3)</onclick>
+						<onclick>Skin.Reset(home2)</onclick>
+						<selected>Skin.HasSetting(home3)</selected>
+					</control>
+					<control type="radiobutton" id="202">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>ListTrackF</textcolor>
+						<focusedcolor>Black</focusedcolor>
+	<!-- LOC -->		<label>Conditional Weather</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(homeweather)</onclick>
+						<selected>Skin.HasSetting(homeweather)</selected>
+					</control>
 				</control>
-				<control type="radiobutton" id="202">
+				<control type="grouplist" id="9003">
+					<visible>Container(9000).Hasfocus(3)</visible>
 					<width>740</width>
-					<font>Font_Settings</font>
-					<textcolor>ListTrackF</textcolor>
-					<focusedcolor>Black</focusedcolor>
-<!-- LOC -->		<label>Conditional Weather</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<onclick>Skin.ToggleSetting(homeweather)</onclick>
-					<selected>Skin.HasSetting(homeweather)</selected>
+					<height>600</height>
+					<itemgap>6</itemgap>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>9003</onup>
+					<ondown>9003</ondown>
+					<include>Animation_CommonFadeNoHide</include>
+					<control type="radiobutton" id="300">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>ListTrackF</textcolor>
+						<focusedcolor>Black</focusedcolor>
+	<!-- LOC -->		<label>File View Focus Line</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(File_View_Focus_Line)</onclick>
+						<selected>Skin.HasSetting(File_View_Focus_Line)</selected>
+					</control>
 				</control>
-			</control>
-			<control type="grouplist" id="9003">
-				<visible>Container(9000).Hasfocus(3)</visible>
-				<width>740</width>
-				<height>600</height>
-				<itemgap>6</itemgap>
-				<onleft>9000</onleft>
-				<onright>9000</onright>
-				<onup>9003</onup>
-				<ondown>9003</ondown>
-				<include>Animation_CommonFadeNoHide</include>
-				<control type="radiobutton" id="300">
+				<control type="grouplist" id="9004">
+					<visible>Container(9000).Hasfocus(4)</visible>
 					<width>740</width>
-					<font>Font_Settings</font>
-					<textcolor>ListTrackF</textcolor>
-					<focusedcolor>Black</focusedcolor>
-<!-- LOC -->		<label>File View Focus Line</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<onclick>Skin.ToggleSetting(File_View_Focus_Line)</onclick>
-					<selected>Skin.HasSetting(File_View_Focus_Line)</selected>
+					<height>600</height>
+					<itemgap>6</itemgap>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>9004</onup>
+					<ondown>9004</ondown>
+					<include>Animation_CommonFadeNoHide</include>
 				</control>
-			</control>
-			<control type="grouplist" id="9004">
-				<visible>Container(9000).Hasfocus(4)</visible>
-				<width>740</width>
-				<height>600</height>
-				<itemgap>6</itemgap>
-				<onleft>9000</onleft>
-				<onright>9000</onright>
-				<onup>9004</onup>
-				<ondown>9004</ondown>
-				<include>Animation_CommonFadeNoHide</include>
-			</control>
-			<control type="grouplist" id="9005">
-				<visible>Container(9000).Hasfocus(5)</visible>
-				<width>740</width>
-				<height>600</height>
-				<itemgap>6</itemgap>
-				<onleft>9000</onleft>
-				<onright>9000</onright>
-				<onup>9005</onup>
-				<ondown>9005</ondown>
-				<include>Animation_CommonFadeNoHide</include>
-				<control type="radiobutton" id="500">
+				<control type="grouplist" id="9005">
+					<visible>Container(9000).Hasfocus(5)</visible>
 					<width>740</width>
-					<font>Font_Settings</font>
-					<textcolor>ListTrackF</textcolor>
-					<focusedcolor>Black</focusedcolor>
-<!-- LOC -->		<label>Debug mode</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<onclick>Skin.ToggleSetting(debugmode)</onclick>
-					<selected>Skin.HasSetting(debugmode)</selected>
-				</control>
-				<control type="radiobutton" id="501">
-					<width>740</width>
-					<font>Font_Settings</font>
-					<textcolor>ListTrackF</textcolor>
-					<focusedcolor>Black</focusedcolor>
-<!-- LOC -->		<label>Debug Grid</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<onclick>Skin.ToggleSetting(debuggrid)</onclick>
-					<selected>Skin.HasSetting(debuggrid)</selected>
+					<height>600</height>
+					<itemgap>6</itemgap>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>9005</onup>
+					<ondown>9005</ondown>
+					<include>Animation_CommonFadeNoHide</include>
+					<control type="radiobutton" id="500">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>ListTrackF</textcolor>
+						<focusedcolor>Black</focusedcolor>
+	<!-- LOC -->		<label>Debug mode</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(debugmode)</onclick>
+						<selected>Skin.HasSetting(debugmode)</selected>
+					</control>
+					<control type="radiobutton" id="501">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>ListTrackF</textcolor>
+						<focusedcolor>Black</focusedcolor>
+	<!-- LOC -->		<label>Debug Grid</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(debuggrid)</onclick>
+						<selected>Skin.HasSetting(debuggrid)</selected>
+					</control>
 				</control>
 			</control>
 		</control>

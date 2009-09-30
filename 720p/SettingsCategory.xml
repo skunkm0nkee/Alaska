@@ -19,14 +19,14 @@
 			<ondown>3</ondown>
 			<orientation>vertical</orientation>
 			<include>Animation_ZoomedByMenu</include>
-			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_ZoomOutZoomIn</include>
 		</control>
 
 		<control type="grouplist" id="5">
 			<description>Control Area</description>
 			<include>Animation_ZoomedByMenu</include>
 			<include>Animation_SettingsFloat</include>
-			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_ZoomOutZoomIn</include>
 			<posx>360</posx>
 			<posy>175</posy>
 			<width>740</width>
