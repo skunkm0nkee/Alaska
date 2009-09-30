@@ -18,7 +18,8 @@
 		<include>Viewtype_MusicWall</include>
 		<include>Viewtype_List</include>
 		<include>Viewtype_Files</include>
-
+		<include>Viewtype_MusicPoster</include><!--54-->
+		
 		<include>Global_ContextFilter</include>
 		
 		<control type="label">
