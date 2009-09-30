@@ -16,7 +16,7 @@
 	<include name="Object_DebugGrid">
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
-			<texture>debuggrid.png</texture>
+			<texture>common/debuggrid.png</texture>
 			<visible>Skin.HasSetting(debuggrid)</visible>
 		</control>
 	</include>

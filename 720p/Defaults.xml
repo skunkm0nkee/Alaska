@@ -57,21 +57,21 @@
     <pulseonselect>false</pulseonselect>
   </default>
 
-  <default type="radiobutton">
-    <posx>0</posx>
-    <posy>0</posy>
-    <font>Font_InfoPlot</font>
-    <label>-</label>
-    <textcolor>Grey</textcolor>
-    <focusedcolor>Black</focusedcolor>
-    <disabledcolor>Red</disabledcolor>
-    <texturenofocus>ButtonNF.png</texturenofocus>
-    <texturefocus>ButtonFo.png</texturefocus>
-    <textureradiofocus>RadiobuttonFo.png</textureradiofocus>
-    <textureradionofocus>RadiobuttonNF.png</textureradionofocus>
-    <textoffsetx>5</textoffsetx>
-    <pulseonselect>false</pulseonselect>
-  </default>
+	<default type="radiobutton">
+		<posx>0</posx>
+		<posy>0</posy>
+		<label>-</label>
+		<font>Font_Settings</font>
+		<textcolor>ListTrackF</textcolor>
+		<focusedcolor>Black</focusedcolor>
+		<disabledcolor>Red</disabledcolor>
+		<texturenofocus>-</texturenofocus>
+		<texturefocus>ButtonFo.png</texturefocus>
+		<textureradiofocus>settings/Button_RadioF.png</textureradiofocus>
+		<textureradionofocus>settings/Button_RadioNF.png</textureradionofocus>
+		<textoffsetx>5</textoffsetx>
+		<pulseonselect>false</pulseonselect>
+	</default>
 
   <default type="spincontrolex">
     <posx>0</posx>

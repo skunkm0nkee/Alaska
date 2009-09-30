@@ -25,7 +25,7 @@
 			<control type="image">
 				<width>292</width>
 				<height>166</height>
-				<texture>black.png</texture>
+				<texture>common/black.png</texture>
 				<bordertexture border="8">common/thumb_border.png</bordertexture>
 				<bordersize>8</bordersize>
 				<aspectratio>stretch</aspectratio>

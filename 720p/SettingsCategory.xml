@@ -55,9 +55,6 @@
 			<textcolor>ListTrackF</textcolor>
 			<align>left</align>
 			<focusedcolor>Black</focusedcolor>
-			<texturefocus>ButtonFo.png</texturefocus>
-			<textureradiofocus>RadiobuttonFo.png</textureradiofocus>
-			<textureradionofocus>RadiobuttonNF.png</textureradionofocus>
 		</control>
 
 		<control type="spincontrolex" id="9">
