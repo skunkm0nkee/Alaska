@@ -60,7 +60,7 @@
 			<posy>1</posy>
 			<width>108</width>
 			<height>108</height>
-			<texture>pics/picturepanel.png</texture>
+			<texture>common/thumb_border.png</texture>
 		</control>
 	</include>
 	
@@ -115,7 +115,7 @@
 			<posy>344</posy>
 			<width>27</width>
 			<height>27</height>
-			<texture flipx="true">pics/picsarrow.png</texture>
+			<texture flipx="true">wall/WallArrow.png</texture>
 			<include>Animation_ZoomInZoomOut</include>			
 			<include>Animation_PictureGridFloat</include>
 			<include>Animation_ZoomedByMenu</include>
@@ -131,7 +131,7 @@
 			<posy>344</posy>
 			<width>27</width>
 			<height>27</height>
-			<texture>pics/picsarrow.png</texture>
+			<texture>wall/WallArrow.png</texture>
 			<include>Animation_ZoomInZoomOut</include>			
 			<include>Animation_PictureGridFloat</include>
 			<include>Animation_ZoomedByMenu</include>

@@ -1,31 +1,8 @@
 <!--Alaska-->
 
 <includes>
-
-	<include name="Object_PicturePanel">
-		<control type="image">
-			<posx>1</posx>
-			<posy>1</posy>
-			<width>108</width>
-			<height>108</height>
-			<texture>pics/picturepanel.png</texture>
-		</control>
-	</include>
-	
-	<include name="Object_PictureIconVars">
-		<posx>5</posx>
-		<posy>5</posy>
-		<width>100</width>
-		<height>100</height>
-		<fadetime>200</fadetime>					
-		<texture>$INFO[ListItem.Icon]</texture>
-		<aspectratio>scale</aspectratio>	
-	</include>
-
 	<include name="Viewtype_MusicWall">
-
 <!-- Browser -->
-	
 		<control type="panel" id="50">
 			<viewtype label="Wall">icon</viewtype>
 			<posx>-30</posx>
@@ -150,7 +127,7 @@
 			<width>27</width>
 			<height>27</height>
 			<visible>Control.IsVisible(50)</visible>
-			<texture flipx="true">pics/picsarrow.png</texture>
+			<texture flipx="true">wall/WallArrow.png</texture>
 			<include>Animation_ZoomInZoomOut</include>
 			<include>Animation_MusicWallFloat</include>
 			<include>Animation_ZoomedByMenu</include>
@@ -163,7 +140,7 @@
 			<width>27</width>
 			<height>27</height>
 			<visible>Control.IsVisible(50)</visible>
-			<texture>pics/picsarrow.png</texture>
+			<texture>wall/WallArrow.png</texture>
 			<include>Animation_ZoomInZoomOut</include>
 			<include>Animation_MusicWallFloat</include>
 			<include>Animation_ZoomedByMenu</include>
