@@ -33,7 +33,7 @@
 					<width>190</width>
 					<height>190</height>
 					<fadetime>200</fadetime>
-					<texture diffuse="wall/musicwallmatte.png">$INFO[ListItem.Icon]</texture>
+					<texture background="true" diffuse="wall/musicwallmatte.png">$INFO[ListItem.Icon]</texture>
 					<colordiffuse>WallIconDiffuse</colordiffuse>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 				</control>
@@ -67,7 +67,7 @@
 					<width>190</width>
 					<height>190</height>
 					<fadetime>200</fadetime>
-					<texture diffuse="wall/musicwallmatte.png">$INFO[ListItem.Icon]</texture>
+					<texture background="true" diffuse="wall/musicwallmatte.png">$INFO[ListItem.Icon]</texture>
 					<animation type="Focus" reversible="false" condition="Container(50).Row(0)">
 						<effect type="fade" start="20" end="100" time="200" />
 						<effect type="slide" start="0,0" end="0,-20" time="400" tween="back" easing="out" />						

@@ -34,7 +34,7 @@
 					<posy>131</posy>
 					<width>162</width>
 					<height>241</height>
-					<texture diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
+					<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
 					<fadetime>200</fadetime>
 					<colordiffuse>89FFFFFF</colordiffuse>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -53,7 +53,7 @@
 					<posy>373</posy>
 					<width>162</width>
 					<height>241</height>
-					<texture flipy="true" diffuse="postermatteNF_reflect.png">$INFO[ListItem.Icon]</texture>
+					<texture background="true" flipy="true" diffuse="postermatteNF_reflect.png">$INFO[ListItem.Icon]</texture>
 					<fadetime>200</fadetime>
 					<colordiffuse>89FFFFFF</colordiffuse>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -76,7 +76,7 @@
 					<posy>20</posy>
 					<width>320</width>
 					<height>476</height>
-					<texture diffuse="postermatte.png">$INFO[ListItem.Icon]</texture>
+					<texture background="true" diffuse="postermatte.png">$INFO[ListItem.Icon]</texture>
 					<fadetime>200</fadetime>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<include>Animation_PosterInfoSlide</include>

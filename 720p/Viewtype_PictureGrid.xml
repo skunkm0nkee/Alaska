@@ -70,7 +70,7 @@
 		<width>100</width>
 		<height>100</height>
 		<fadetime>200</fadetime>					
-		<texture>$INFO[ListItem.Icon]</texture>
+		<texture background="true">$INFO[ListItem.Icon]</texture>
 		<aspectratio>scale</aspectratio>	
 	</include>
 
