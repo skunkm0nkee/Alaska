@@ -294,7 +294,7 @@
 				</animation>
 				<control type="multiimage">
 					<include>Home_MainMenuIconF</include>
-					<imagepath diffuse="mainmenu/homematte.png" fallback="special://skin/media/backdrops/games//" >$INFO[Skin.String(CustomGames)]</imagepath>
+					<imagepath diffuse="mainmenu/homematte.png" fallback="backdrops/programs.jpg" >$INFO[Skin.String(CustomGames)]</imagepath>
 				</control>
 				<include>Home_MainMenuFrame</include>
 				<control type="label">
@@ -313,7 +313,7 @@
 				</animation>
 				<control type="multiimage">
 					<include>Home_MainMenuIconF</include>
-					<imagepath diffuse="mainmenu/homematte.png" fallback="special://skin/media/backdrops/videos//">$INFO[Skin.String(CustomVideos)]</imagepath>
+					<imagepath diffuse="mainmenu/homematte.png" fallback="backdrops/videos.jpg">$INFO[Skin.String(CustomVideos)]</imagepath>
 				</control>
 				<include>Home_MainMenuFrame</include>
 				<control type="label">
@@ -332,7 +332,7 @@
 				</animation>
 				<control type="multiimage">
 					<include>Home_MainMenuIconF</include>
-					<imagepath diffuse="mainmenu/homematte.png" fallback="special://skin/media/backdrops/music//">$INFO[Skin.String(CustomMusic)]</imagepath>
+					<imagepath diffuse="mainmenu/homematte.png" fallback="backdrops/music.jpg">$INFO[Skin.String(CustomMusic)]</imagepath>
 				</control>
 				<include>Home_MainMenuFrame</include>
 				<control type="label">
@@ -351,7 +351,7 @@
 				</animation>
 				<control type="multiimage">
 					<include>Home_MainMenuIconF</include>
-					<imagepath diffuse="mainmenu/homematte.png" fallback="special://skin/media/backdrops/movies//">$INFO[Skin.String(CustomMovies)]</imagepath>
+					<imagepath diffuse="mainmenu/homematte.png" fallback="backdrops/movies.jpg">$INFO[Skin.String(CustomMovies)]</imagepath>
 				</control>
 				<include>Home_MainMenuFrame</include>
 				<control type="label">
@@ -370,7 +370,7 @@
 				</animation>
 				<control type="multiimage">
 					<include>Home_MainMenuIconF</include>
-					<imagepath diffuse="mainmenu/homematte.png" fallback="special://skin/media/backdrops/tvshows//">$INFO[Skin.String(CustomTV)]</imagepath>
+					<imagepath diffuse="mainmenu/homematte.png" fallback="backdrops/tvshows.jpg">$INFO[Skin.String(CustomTV)]</imagepath>
 				</control>
 				<include>Home_MainMenuFrame</include>
 				<control type="label">
@@ -389,7 +389,7 @@
 				</animation>
 				<control type="multiimage">
 					<include>Home_MainMenuIconF</include>
-					<imagepath diffuse="mainmenu/homematte.png" fallback="special://skin/media/backdrops/pictures//">$INFO[Skin.String(CustomPictures)]</imagepath>
+					<imagepath diffuse="mainmenu/homematte.png" fallback="backdrops/pictures.jpg">$INFO[Skin.String(CustomPictures)]</imagepath>
 				</control>
 				<include>Home_MainMenuFrame</include>
 				<control type="label">
@@ -408,12 +408,12 @@
 				</animation>
 				<control type="multiimage">
 					<include>Home_MainMenuIconF</include>
-					<imagepath diffuse="mainmenu/homematte.png" fallback="special://skin/media/backdrops/weather//">$INFO[Skin.String(CustomWeather)]</imagepath>
+					<imagepath diffuse="mainmenu/homematte.png" fallback="backdrops/weather.jpg">$INFO[Skin.String(CustomWeather)]</imagepath>
 					<visible>!Skin.HasSetting(homeweather)</visible>
 				</control>
 				<control type="multiimage">
 					<include>Home_MainMenuIconF</include>
-					<imagepath diffuse="mainmenu/homematte.png" fallback="special://skin/media/mainmenu/weather/weather.png">mainmenu/weather/$INFO[Weather.FanartCode]/</imagepath>
+					<imagepath diffuse="mainmenu/homematte.png" fallback="backdrops/weather.jpg">mainmenu/weather/$INFO[Weather.FanartCode]/</imagepath>
 					<visible>Skin.HasSetting(homeweather)</visible>
 				</control>
 				<include>Home_MainMenuFrame</include>
@@ -433,7 +433,7 @@
 				</animation>
 				<control type="multiimage">
 					<include>Home_MainMenuIconF</include>
-					<imagepath diffuse="mainmenu/homematte.png" fallback="special://skin/media/backdrops/settings//">$INFO[Skin.String(CustomSettings)]</imagepath>
+					<imagepath diffuse="mainmenu/homematte.png" fallback="backdrops/settings.jpg">$INFO[Skin.String(CustomSettings)]</imagepath>
 				</control>
 				<include>Home_MainMenuFrame</include>
 				<control type="label">
@@ -483,42 +483,42 @@
 				<item id="1">
 					<description>Music</description>
 					<label>2</label>
-					<icon>special://skin/media/mainmenu/music.png</icon>
+					<icon>backdrops/musicicon.png</icon>
 					<onclick>XBMC.ActivateWindow(MyMusic,return)</onclick>
 					<visible>!Skin.HasSetting(nomusic)</visible>
 				</item>
 				<item id="2">
 					<description>PROGRAMS</description>
 					<label>0</label>
-					<icon>special://skin/media/mainmenu/games.png</icon>
+					<icon>backdrops/programsicon.png</icon>
 					<onclick>XBMC.ActivateWindow(MyPrograms)</onclick>
 					<visible>!Skin.HasSetting(nogames)</visible>
 				</item>
 				<item id="3">
 					<description>Picture</description>
 					<label>1</label>
-					<icon>special://skin/media/mainmenu/pictures.png</icon>
+					<icon>backdrops/picturesicon.png</icon>
 					<onclick>XBMC.ActivateWindow(MyPictures)</onclick>
 					<visible>!Skin.HasSetting(nopictures)</visible>
 				</item>
 				<item id="4">
 					<description>Movies</description>
 					<label>342</label>
-					<icon>special://skin/media/mainmenu/movies.png</icon>
+					<icon>backdrops/moviesicon.png</icon>
 					<onclick>XBMC.ActivateWindow(MyVideoLibrary,movietitles,return)</onclick>
 					<visible>!Skin.HasSetting(nomovies)</visible>
 				</item>
 				<item id="5">
 					<description>Tv Shows</description>
 					<label>20343</label>
-					<icon>special://skin/media/mainmenu/tvshows.png</icon>
+					<icon>backdrops/tvshowsicon.png</icon>
 					<onclick>XBMC.ActivateWindow(MyVideoLibrary,tvshowtitles,return)</onclick>
 					<visible>!Skin.HasSetting(notvshows)</visible>
 				</item>
 				<item id="6">
 					<description>Video</description>
 					<label>3</label>
-					<icon>special://skin/media/mainmenu/videos.png</icon>
+					<icon>backdrops/videosicon.png</icon>
 					<onclick>XBMC.ActivateWindow(MyVideoFiles)</onclick>
 					<visible>!Skin.HasSetting(novideos)</visible>
 				</item>
@@ -532,7 +532,7 @@
 				<item id="8">
 					<description>Settings</description>
 					<label>5</label>
-					<icon>special://skin/media/mainmenu/settings.png</icon>
+					<icon>backdrops/settingsicon.png</icon>
 					<onclick>XBMC.ActivateWindow(4)</onclick>
 					<visible>!Skin.HasSetting(nosettings)</visible>
 				</item>
@@ -545,7 +545,7 @@
 				<item id="10">
 					<description>Play Disc</description>
 					<label>31018</label>
-					<icon>special://skin/media/mainmenu/playdisc.png</icon>
+					<icon>backdrops/playdiscicon.png</icon>
 					<onclick>XBMC.PlayDVD</onclick>
 					<visible>System.HasMediadvd</visible>
 				</item>
@@ -558,7 +558,7 @@
 				<item id="13">
 					<description>Shutdown</description>
 					<label>31019</label>
-					<icon>special://skin/media/mainmenu/shutdown.png</icon>
+					<icon>backdrops/shutdownicon.png</icon>
 					<onclick>XBMC.Shutdown()</onclick>
 					<visible>false</visible>
 				</item>
@@ -654,56 +654,56 @@
 				<item id="1">
 					<description>PROGRAMS</description>
 					<label>0</label>
-					<icon>special://skin/media/backdrops/games/</icon>
+					<icon>special://skin/media/backdrops/programs.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomPictures)]</thumb>
 					<onclick>XBMC.ActivateWindow(MyPrograms)</onclick>
 				</item>
 				<item id="2">
 					<description>Video</description>
 					<label>3</label>
-					<icon>special://skin/media/backdrops/videos/</icon>
+					<icon>special://skin/media/backdrops/videos.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomVideos)]</thumb>
 					<onclick>XBMC.ActivateWindow(MyVideoFiles)</onclick>
 				</item>
 				<item id="3">
 					<description>Music</description>
 					<label>2</label>
-					<icon>special://skin/media/backdrops/music/</icon>
+					<icon>special://skin/media/backdrops/music.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomMusic)]</thumb>
 					<onclick>XBMC.ActivateWindow(MyMusic,return)</onclick>
 				</item>
 				<item id="4">
 					<description>Movies</description>
 					<label>342</label>
-					<icon>special://skin/media/backdrops/movies/</icon>
+					<icon>special://skin/media/backdrops/movies.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomMovies)]</thumb>
 					<onclick>XBMC.ActivateWindow(MyVideoLibrary,movietitles,return)</onclick>
 				</item>
 				<item id="5">
 					<description>Tv Shows</description>
 					<label>20343</label>
-					<icon>special://skin/media/backdrops/tvshows/</icon>
+					<icon>special://skin/media/backdrops/tvshows.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomTV)]</thumb>
 					<onclick>XBMC.ActivateWindow(MyVideoLibrary,tvshowtitles,return)</onclick>
 				</item>
 				<item id="6">
 					<description>Picture</description>
 					<label>1</label>
-					<icon>special://skin/media/backdrops/pictures/</icon>
+					<icon>special://skin/media/backdrops/pictures.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomPictures)]</thumb>
 					<onclick>XBMC.ActivateWindow(MyPictures)</onclick>
 				</item>
 				<item id="7">
 					<description>Weather</description>
 					<label>8</label>
-					<icon>special://skin/media/backdrops/weather/</icon>
+					<icon>special://skin/media/backdrops/weather.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomWeather)]</thumb>
 					<onclick>XBMC.Activatewindow(2600)</onclick>
 				</item>
 				<item id="8">
 					<description>Settings</description>
 					<label>5</label>
-					<icon>special://skin/media/backdrops/settings/</icon>
+					<icon>special://skin/media/backdrops/settings.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomSettings)]</thumb>
 					<onclick>XBMC.ActivateWindow(4)</onclick>
 				</item>
@@ -716,7 +716,7 @@
 				<item id="10">
 					<description>Play Disc</description>
 					<label>31018</label>
-					<icon>special://skin/media/mainmenu/playdisc.png</icon>
+					<icon>backdrops/playdiscicon.png</icon>
 					<onclick>XBMC.PlayDVD</onclick>
 					<visible>System.HasMediadvd</visible>
 				</item>
@@ -729,7 +729,7 @@
 				<item id="13">
 					<description>Shutdown</description>
 					<label>31019</label>
-					<icon>special://skin/media/mainmenu/shutdown.png</icon>
+					<icon>backdrops/shutdownicon.png</icon>
 					<onclick>XBMC.Shutdown()</onclick>
 					<visible>false</visible>
 				</item-->
@@ -743,7 +743,7 @@
 		<timeperimage>20000</timeperimage>
 		<randomize>true</randomize>
 		<fadetime>1200</fadetime>
-		<aspectratio align="top" scalediffuse="false">stretch</aspectratio>
+		<aspectratio align="top" scalediffuse="false">scale</aspectratio>
 		<animation effect="fade" start="0" end="100" time="400" delay="10000">Visible</animation>
 		<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
 	</include>
