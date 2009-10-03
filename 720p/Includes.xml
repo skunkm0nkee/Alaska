@@ -1,5 +1,5 @@
 <includes>
-<!-- File includes -->
+	<!-- File includes -->
 	<include file="Defaults.xml" />
 	<include file="Viewtype_Episode.xml" />
 	<include file="Viewtype_Poster.xml" />
@@ -12,7 +12,7 @@
 	<include file="Includes_MediaFlags.xml" />
 	<include file="Includes_Animations.xml" />
 	<include file="Includes_Backgrounds.xml" />
-<!-- Debug objects -->
+	<!-- Debug objects -->
 	<include name="Object_DebugGrid">
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
@@ -34,14 +34,14 @@
 		<textcolor>Red</textcolor>
 		<align>left</align>
 	</include>
-<!-- Global dimensions -->
+	<!-- Global dimensions -->
 	<include name="Dimensions_Fullscreen">
 		<posx>0</posx>
 		<posy>0</posy>
 		<width>1280</width>
 		<height>720</height>
 	</include>
-<!-- Global objects -->
+	<!-- Global objects -->
 	<include name="Global_Background">
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
@@ -242,27 +242,27 @@
 			<visible>Skin.HasSetting(largeRSS)+[Window.IsActive(home)|!Skin.HasSetting(RSS_olny_on_home)]</visible>
 		</control>
 	</include>
-<!-- OSD -->
+	<!-- OSD -->
 	<include name="OSD_Back">
-			<control type="image">
-				<posx>-5</posx>
-				<posy>0</posy>
-				<width>1290</width>
-				<height>165</height>
-				<texture>backdrops/background.png</texture>
-				<aspectratio aligny="bottom">scale</aspectratio>
-			</control>
-			<control type="image">
-				<posx>-5</posx>
-				<posy>0</posy>
-				<width>1290</width>
-				<height>165</height>
-				<texture>backdrops/backgroundcolordiffuse.png</texture>
-				<colordiffuse>backgroundColor</colordiffuse>
-				<aspectratio aligny="bottom">scale</aspectratio>
-			</control>
+		<control type="image">
+			<posx>-5</posx>
+			<posy>0</posy>
+			<width>1290</width>
+			<height>165</height>
+			<texture>backdrops/background.png</texture>
+			<aspectratio aligny="bottom">scale</aspectratio>
+		</control>
+		<control type="image">
+			<posx>-5</posx>
+			<posy>0</posy>
+			<width>1290</width>
+			<height>165</height>
+			<texture>backdrops/backgroundcolordiffuse.png</texture>
+			<colordiffuse>backgroundColor</colordiffuse>
+			<aspectratio aligny="bottom">scale</aspectratio>
+		</control>
 	</include>
-<!-- Home -->
+	<!-- Home -->
 	<include name="Home_MenuImage">
 		<control type="wraplist" id="300">
 			<posx>0</posx>
@@ -445,6 +445,18 @@
 		</control>
 	</include>
 	<include name="Home_MenuIcon">
+		<control type="label">
+			<posx>-320</posx>
+			<posy>330</posy>
+			<width>1920</width>
+			<align>center</align>
+			<aligny>top</aligny>
+			<label>$INFO[Container(300).ListItem.Label]</label>
+			<font>Font_MainMenu</font>
+			<textcolor>MainMenu</textcolor>
+			<include>Animation_ZoomOutZoomIn</include>
+			<include>Animation_ZoomedByMenu</include>
+		</control>
 		<control type="wraplist" id="300">
 			<posx>-131</posx>
 			<posy>130</posy>
@@ -577,18 +589,18 @@
 	</include>
 	<include name="Home_MenuList">
 		<control type="multiimage">
-		<include>Animation_homebackground</include>
-		<width>1280</width>
-		<height>720</height>
-		<posx>0</posx>
-		<posy>0</posy>
-		<timeperimage>20000</timeperimage>
-		<randomize>true</randomize>
-		<fadetime>400</fadetime>
-		<colordiffuse>55FFFFFF</colordiffuse>
-		<aspectratio align="center" scalediffuse="true">stretch</aspectratio>
-		<include>Animation_CommonFade</include>
-		<imagepath background="true">$INFO[Container(300).ListItem.Icon]</imagepath>
+			<include>Animation_homebackground</include>
+			<width>1280</width>
+			<height>720</height>
+			<posx>0</posx>
+			<posy>0</posy>
+			<timeperimage>20000</timeperimage>
+			<randomize>true</randomize>
+			<fadetime>400</fadetime>
+			<colordiffuse>55FFFFFF</colordiffuse>
+			<aspectratio align="center" scalediffuse="true">stretch</aspectratio>
+			<include>Animation_CommonFade</include>
+			<imagepath background="true">$INFO[Container(300).ListItem.Icon]</imagepath>
 		</control>
 		<control type="wraplist" id="300">
 			<posx>180</posx>
@@ -650,64 +662,64 @@
 		</control>
 	</include>
 	<include name="Home_MenuContent">
-			<content>
-				<item id="1">
-					<description>PROGRAMS</description>
-					<label>0</label>
-					<icon>special://skin/media/backdrops/programs.jpg</icon>
-					<thumb>$INFO[Skin.String(CustomPictures)]</thumb>
-					<onclick>XBMC.ActivateWindow(MyPrograms)</onclick>
-				</item>
-				<item id="2">
-					<description>Video</description>
-					<label>3</label>
-					<icon>special://skin/media/backdrops/videos.jpg</icon>
-					<thumb>$INFO[Skin.String(CustomVideos)]</thumb>
-					<onclick>XBMC.ActivateWindow(MyVideoFiles)</onclick>
-				</item>
-				<item id="3">
-					<description>Music</description>
-					<label>2</label>
-					<icon>special://skin/media/backdrops/music.jpg</icon>
-					<thumb>$INFO[Skin.String(CustomMusic)]</thumb>
-					<onclick>XBMC.ActivateWindow(MyMusic,return)</onclick>
-				</item>
-				<item id="4">
-					<description>Movies</description>
-					<label>342</label>
-					<icon>special://skin/media/backdrops/movies.jpg</icon>
-					<thumb>$INFO[Skin.String(CustomMovies)]</thumb>
-					<onclick>XBMC.ActivateWindow(MyVideoLibrary,movietitles,return)</onclick>
-				</item>
-				<item id="5">
-					<description>Tv Shows</description>
-					<label>20343</label>
-					<icon>special://skin/media/backdrops/tvshows.jpg</icon>
-					<thumb>$INFO[Skin.String(CustomTV)]</thumb>
-					<onclick>XBMC.ActivateWindow(MyVideoLibrary,tvshowtitles,return)</onclick>
-				</item>
-				<item id="6">
-					<description>Picture</description>
-					<label>1</label>
-					<icon>special://skin/media/backdrops/pictures.jpg</icon>
-					<thumb>$INFO[Skin.String(CustomPictures)]</thumb>
-					<onclick>XBMC.ActivateWindow(MyPictures)</onclick>
-				</item>
-				<item id="7">
-					<description>Weather</description>
-					<label>8</label>
-					<icon>special://skin/media/backdrops/weather.jpg</icon>
-					<thumb>$INFO[Skin.String(CustomWeather)]</thumb>
-					<onclick>XBMC.Activatewindow(2600)</onclick>
-				</item>
-				<item id="8">
-					<description>Settings</description>
-					<label>5</label>
-					<icon>special://skin/media/backdrops/settings.jpg</icon>
-					<thumb>$INFO[Skin.String(CustomSettings)]</thumb>
-					<onclick>XBMC.ActivateWindow(4)</onclick>
-				</item>
-				<!--item id="9">
+		<content>
+			<item id="1">
+				<description>PROGRAMS</description>
+				<label>0</label>
+				<icon>special://skin/media/backdrops/programs.jpg</icon>
+				<thumb>$INFO[Skin.String(CustomPictures)]</thumb>
+				<onclick>XBMC.ActivateWindow(MyPrograms)</onclick>
+			</item>
+			<item id="2">
+				<description>Video</description>
+				<label>3</label>
+				<icon>special://skin/media/backdrops/videos.jpg</icon>
+				<thumb>$INFO[Skin.String(CustomVideos)]</thumb>
+				<onclick>XBMC.ActivateWindow(MyVideoFiles)</onclick>
+			</item>
+			<item id="3">
+				<description>Music</description>
+				<label>2</label>
+				<icon>special://skin/media/backdrops/music.jpg</icon>
+				<thumb>$INFO[Skin.String(CustomMusic)]</thumb>
+				<onclick>XBMC.ActivateWindow(MyMusic,return)</onclick>
+			</item>
+			<item id="4">
+				<description>Movies</description>
+				<label>342</label>
+				<icon>special://skin/media/backdrops/movies.jpg</icon>
+				<thumb>$INFO[Skin.String(CustomMovies)]</thumb>
+				<onclick>XBMC.ActivateWindow(MyVideoLibrary,movietitles,return)</onclick>
+			</item>
+			<item id="5">
+				<description>Tv Shows</description>
+				<label>20343</label>
+				<icon>special://skin/media/backdrops/tvshows.jpg</icon>
+				<thumb>$INFO[Skin.String(CustomTV)]</thumb>
+				<onclick>XBMC.ActivateWindow(MyVideoLibrary,tvshowtitles,return)</onclick>
+			</item>
+			<item id="6">
+				<description>Picture</description>
+				<label>1</label>
+				<icon>special://skin/media/backdrops/pictures.jpg</icon>
+				<thumb>$INFO[Skin.String(CustomPictures)]</thumb>
+				<onclick>XBMC.ActivateWindow(MyPictures)</onclick>
+			</item>
+			<item id="7">
+				<description>Weather</description>
+				<label>8</label>
+				<icon>special://skin/media/backdrops/weather.jpg</icon>
+				<thumb>$INFO[Skin.String(CustomWeather)]</thumb>
+				<onclick>XBMC.Activatewindow(2600)</onclick>
+			</item>
+			<item id="8">
+				<description>Settings</description>
+				<label>5</label>
+				<icon>special://skin/media/backdrops/settings.jpg</icon>
+				<thumb>$INFO[Skin.String(CustomSettings)]</thumb>
+				<onclick>XBMC.ActivateWindow(4)</onclick>
+			</item>
+			<!--item id="9">
 					<description>Scripts</description>
 					<label>31020</label>
 					<onclick>XBMC.ActivateWindow(20)</onclick>
@@ -733,7 +745,19 @@
 					<onclick>XBMC.Shutdown()</onclick>
 					<visible>false</visible>
 				</item-->
-			</content>
+		</content>
+		<control type="label">
+			<posx>-320</posx>
+			<posy>330</posy>
+			<width>1920</width>
+			<align>center</align>
+			<aligny>top</aligny>
+			<label>$INFO[Container(300).ListItem.Label]</label>
+			<font>Font_MainMenu</font>
+			<textcolor>MainMenu</textcolor>
+			<include>Animation_ZoomOutZoomIn</include>
+			<include>Animation_ZoomedByMenu</include>
+		</control>
 	</include>
 	<include name="Home_MainMenuIconF">
 		<width>349</width>
@@ -793,7 +817,7 @@
 		<font>Font_MainMenu</font>
 		<textcolor>MainMenu</textcolor>
 	</include>
-<!-- Settings -->
+	<!-- Settings -->
 	<include name="Setting_Heading">
 		<control type="group">
 			<posx>30</posx>
@@ -812,7 +836,8 @@
 			</control>
 			<control type="label">
 				<description>Settings Menu</description>
-<!-- LOC -->	<label>Menu</label>
+				<!-- LOC -->
+				<label>Menu</label>
 				<include>Animation_Setting_Heading</include>
 				<include>Global_HeadingDetailVars</include>
 				<visible>Window.IsActive(4)</visible>
@@ -875,7 +900,8 @@
 			</control>
 			<control type="label">
 				<description>Customise</description>
-<!-- LOC -->	<label>CUSTOMISE</label>
+				<!-- LOC -->
+				<label>CUSTOMISE</label>
 				<include>Animation_Setting_Heading</include>
 				<include>Global_HeadingDetailVars</include>
 				<visible>Window.IsActive(56)</visible>
@@ -894,7 +920,7 @@
 		<textcolor>SettingsDetail</textcolor>
 		<wrapmultiline>true</wrapmultiline>
 	</include>
-<!-- Info dialog objects -->
+	<!-- Info dialog objects -->
 	<include name="Object_MovieInfoLines">
 		<control type="image">
 			<posx>0</posx>
@@ -906,7 +932,7 @@
 			<include>Animation_CommonFade</include>
 		</control>
 	</include>
-<!-- Window menus -->
+	<!-- Window menus -->
 	<include name="WindowMenuVars">
 		<width>1000</width>
 		<height>40</height>

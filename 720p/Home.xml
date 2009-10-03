@@ -15,20 +15,6 @@
 		<include condition="Skin.HasSetting(home2)">Home_MenuIcon</include>
 		<include condition="Skin.HasSetting(home3)">Home_MenuList</include>
 
-		<control type="label">
-			<posx>-320</posx>
-			<posy>330</posy>
-			<width>1920</width>
-			<align>center</align>
-			<aligny>top</aligny>
-			<label>$INFO[Container(300).ListItem.Label]</label>
-			<font>Font_MainMenu</font>
-			<textcolor>MainMenu</textcolor>
-			<include>Animation_ZoomOutZoomIn</include>
-			<include>Animation_ZoomedByMenu</include>
-			<visible>Skin.HasSetting(home2) | Skin.HasSetting(home3)</visible>
-		</control>
-
 		<include>Global_ContextFilter</include>
 		<include>Global_Time</include>
 		<include>Global_RSS</include>
