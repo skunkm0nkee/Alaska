@@ -251,6 +251,7 @@
 			<height>165</height>
 			<texture>backdrops/background.png</texture>
 			<aspectratio aligny="bottom">scale</aspectratio>
+			<animation effect="slide" start="0,0" end="0,82" time="0" condition="Window.IsVisible(115)">Conditional</animation>
 		</control>
 		<control type="image">
 			<posx>-5</posx>
@@ -260,6 +261,7 @@
 			<texture>backdrops/backgroundcolordiffuse.png</texture>
 			<colordiffuse>backgroundColor</colordiffuse>
 			<aspectratio aligny="bottom">scale</aspectratio>
+			<animation effect="slide" start="0,0" end="0,82" time="0" condition="Window.IsVisible(115)">Conditional</animation>
 		</control>
 	</include>
 	<!-- Home -->
