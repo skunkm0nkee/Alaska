@@ -126,8 +126,8 @@
 	<!-- LOC -->		<label>only show RSS on home screen</label>
 						<align>left</align>
 						<aligny>center</aligny>
-						<onclick>Skin.ToggleSetting(RSS_olny_on_home)</onclick>
-						<selected>Skin.HasSetting(RSS_olny_on_home)</selected>
+						<onclick>Skin.ToggleSetting(RSS_only_on_home)</onclick>
+						<selected>Skin.HasSetting(RSS_only_on_home)</selected>
 					</control>
 				</control>
 				<control type="grouplist" id="9002">
