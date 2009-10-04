@@ -114,116 +114,114 @@
 			</focusedlayout>
 		</control>
 
-				<!-- Browser label and flags -->
+		<!-- Browser label and flags -->
 
-				<control type="group">
+		<control type="group">
 			<posx>500</posx>
 			<posy>58</posy>
 			<visible>Control.IsVisible(52)</visible>
-					<include>Animation_SlideUpFadeOut</include>
-					<include>Animation_HiddenByInfo</include>
-					<include>Animation_ZoomedByMenu</include>			
-					<control type="label">
-						<posx>5</posx>
-						<posy>306</posy>
-						<width>370</width>
-						<height>50</height>
-						<aligny>center</aligny>
-						<font>Font_MainMenuLabel</font>
-						<textcolor>PosterTitle</textcolor>
-						<label>[B]$INFO[ListItem.Label][/B]</label>
-						<visible>Container.Content(tvshows)</visible>
-					</control>
-					<control type="label">
-						<posx>5</posx>
-						<posy>300</posy>
-						<width>395</width>
-						<font>Font_MainMenuLabel</font>
-						<textcolor>PosterTitle</textcolor>
-						<label>[B]$INFO[ListItem.TVShowTitle][CR]$INFO[ListItem.Label][/B]</label>
-						<visible>Container.Content(seasons)</visible>
-					</control>			
-					<control type="label">
-						<posx>5</posx>
-						<posy>306</posy>
-						<width>50</width>
-						<height>50</height>
-						<aligny>center</aligny>
-						<font>Font_MainMenuLabel</font>
-						<textcolor>PosterTitle</textcolor>
-						<label>[B]$INFO[ListItem.Episode][/B]. </label>
-						<visible>Container.Content(episodes)</visible>
-					</control>			
-					<control type="label">
-						<posx>50</posx>
-						<posy>306</posy>
-						<width>640</width>
-						<height>50</height>
-						<aligny>center</aligny>
-						<font>Font_MainMenuLabel</font>
-						<textcolor>PosterTitle</textcolor>
-						<label>[B]$INFO[ListItem.Title][/B]</label>
-						<visible>Container.Content(episodes)</visible>
-					</control>			
-					<control type="label">
-						<posx>5</posx>
-						<posy>340</posy>
-						<width>370</width>
-						<height>50</height>
-						<aligny>center</aligny>
-						<font>Font_TVShow</font>
-						<textcolor>ListTrackF</textcolor>
-						<label>Aired: [B]$INFO[ListItem.Date][/B]</label>
-						<visible>Container.Content(episodes)</visible>
-					</control>			
-					<control type="label">
-						<posx>5</posx>
-						<posy>340</posy>
-						<width>640</width>
-						<height>50</height>
-						<aligny>center</aligny>
-						<font>Font_TVShow</font>
-						<textcolor>ListTrackF</textcolor>
-						<label>Genre: [B]$INFO[ListItem.Genre][/B]</label>
-						<visible>Container.Content(tvshows)</visible>
-					</control>			
-					<control type="label">
-						<posx>5</posx>
-						<posy>365</posy>
-						<width>570</width>
-						<height>50</height>
-						<aligny>center</aligny>
-						<font>Font_TVShow</font>
-						<textcolor>ListTrackF</textcolor>
-						<label>Episodes: [B]$INFO[ListItem.Episode][/B]</label>
-						<visible>Container.Content(tvshows)</visible>
-					</control>			
-					<control type="label">
-						<posx>5</posx>
-						<posy>390</posy>
-						<width>570</width>
-						<height>50</height>
-						<aligny>center</aligny>
-						<font>Font_TVShow</font>
-						<textcolor>ListTrackF</textcolor>
-						<label>Premiered: [B]$INFO[ListItem.Premiered][/B]</label>
-						<visible>Container.Content(tvshows)</visible>
-					</control>		
-					<control type="textbox">
-						<posx>5</posx>
-						<posy>390</posy>
-						<width>633</width>
+			<include>Animation_SlideUpFadeOut</include>
+			<include>Animation_HiddenByInfo</include>
+			<include>Animation_ZoomedByMenu</include>			
+			<control type="label">
+				<posx>5</posx>
+				<posy>306</posy>
+				<width>370</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_MainMenuLabel</font>
+				<textcolor>PosterTitle</textcolor>
+				<label>[B]$INFO[ListItem.Label][/B]</label>
+				<visible>Container.Content(tvshows)</visible>
+			</control>
+			<control type="label">
+				<posx>5</posx>
+				<posy>300</posy>
+				<width>395</width>
+				<font>Font_MainMenuLabel</font>
+				<textcolor>PosterTitle</textcolor>
+				<label>[B]$INFO[ListItem.TVShowTitle][CR]$INFO[ListItem.Label][/B]</label>
+				<visible>Container.Content(seasons)</visible>
+			</control>			
+			<control type="label">
+				<posx>5</posx>
+				<posy>306</posy>
+				<width>50</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_MainMenuLabel</font>
+				<textcolor>PosterTitle</textcolor>
+				<label>[B]$INFO[ListItem.Episode][/B]. </label>
+				<visible>Container.Content(episodes)</visible>
+			</control>			
+			<control type="label">
+				<posx>50</posx>
+				<posy>306</posy>
+				<width>640</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_MainMenuLabel</font>
+				<textcolor>PosterTitle</textcolor>
+				<label>[B]$INFO[ListItem.Title][/B]</label>
+				<visible>Container.Content(episodes)</visible>
+			</control>			
+			<control type="label">
+				<posx>5</posx>
+				<posy>340</posy>
+				<width>370</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_TVShow</font>
+				<textcolor>ListTrackF</textcolor>
+				<label>Aired: [B]$INFO[ListItem.Date][/B]</label>
+				<visible>Container.Content(episodes)</visible>
+			</control>			
+			<control type="label">
+				<posx>5</posx>
+				<posy>340</posy>
+				<width>640</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_TVShow</font>
+				<textcolor>ListTrackF</textcolor>
+				<label>Genre: [B]$INFO[ListItem.Genre][/B]</label>
+				<visible>Container.Content(tvshows)</visible>
+			</control>			
+			<control type="label">
+				<posx>5</posx>
+				<posy>365</posy>
+				<width>570</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_TVShow</font>
+				<textcolor>ListTrackF</textcolor>
+				<label>Episodes: [B]$INFO[ListItem.Episode][/B]</label>
+				<visible>Container.Content(tvshows)</visible>
+			</control>			
+			<control type="label">
+				<posx>5</posx>
+				<posy>390</posy>
+				<width>570</width>
+				<height>50</height>
+				<aligny>center</aligny>
+				<font>Font_TVShow</font>
+				<textcolor>ListTrackF</textcolor>
+				<label>Premiered: [B]$INFO[ListItem.Premiered][/B]</label>
+				<visible>Container.Content(tvshows)</visible>
+			</control>		
+			<control type="textbox">
+				<posx>5</posx>
+				<posy>390</posy>
+				<width>633</width>
 				<height>120</height>
-						<align>left</align>
-						<info>ListItem.Plot</info>
-						<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-						<font>Font_TVShow</font>
-						<textcolor>ListTrackF</textcolor>
-						<visible>Container.Content(episodes)</visible>
-					</control>			
-				</control>
-
-		<include>EpisodeMediaFlags</include>
+				<align>left</align>
+				<info>ListItem.Plot</info>
+				<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+				<font>Font_TVShow</font>
+				<textcolor>ListTrackF</textcolor>
+				<visible>Container.Content(episodes)</visible>
+			</control>			
+		</control>
 
 	</include>
 
