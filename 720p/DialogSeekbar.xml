@@ -61,7 +61,7 @@
 		</control>
 		<control type="image">
 			<posx>0</posx>
-			<posy>330</posy>
+			<posy>265</posy>
 			<width>1280</width>
 			<height>190</height>
 			<texture>common/black.png</texture>
@@ -70,7 +70,7 @@
 		</control>
 		<control type="label" id="0">
 			<posx>-320</posx>
-			<posy>280</posy>
+			<posy>215</posy>
 			<width>1920</width>
 			<align>center</align>
 			<aligny>top</aligny>
@@ -81,7 +81,7 @@
 		</control>
 		<control type="label" id="0">
 			<posx>-320</posx>
-			<posy>280</posy>
+			<posy>215</posy>
 			<width>1920</width>
 			<align>center</align>
 			<aligny>top</aligny>
@@ -92,7 +92,7 @@
 		</control>
 		<control type="label" id="0">
 			<posx>-320</posx>
-			<posy>280</posy>
+			<posy>215</posy>
 			<width>1920</width>
 			<align>center</align>
 			<aligny>top</aligny>
@@ -103,7 +103,7 @@
 		</control>
 		<control type="label" id="0">
 			<posx>-320</posx>
-			<posy>280</posy>
+			<posy>215</posy>
 			<width>1920</width>
 			<align>center</align>
 			<aligny>top</aligny>
@@ -114,7 +114,7 @@
 		</control>
 		<control type="label" id="0">
 			<posx>-320</posx>
-			<posy>280</posy>
+			<posy>215</posy>
 			<width>1920</width>
 			<align>center</align>
 			<aligny>top</aligny>
@@ -125,7 +125,7 @@
 		</control>
 		<control type="label" id="0">
 			<posx>-320</posx>
-			<posy>280</posy>
+			<posy>215</posy>
 			<width>1920</width>
 			<align>center</align>
 			<aligny>top</aligny>
@@ -136,7 +136,7 @@
 		</control>
 		<control type="label" id="0">
 			<posx>-320</posx>
-			<posy>280</posy>
+			<posy>215</posy>
 			<width>1920</width>
 			<align>center</align>
 			<aligny>top</aligny>
@@ -147,7 +147,7 @@
 		</control>
 		<control type="label" id="0">
 			<posx>-320</posx>
-			<posy>280</posy>
+			<posy>215</posy>
 			<width>1920</width>
 			<align>center</align>
 			<aligny>top</aligny>
@@ -158,7 +158,7 @@
 		</control>
 		<control type="label" id="0">
 			<posx>-320</posx>
-			<posy>280</posy>
+			<posy>215</posy>
 			<width>1920</width>
 			<align>center</align>
 			<aligny>top</aligny>
@@ -169,7 +169,7 @@
 		</control>
 		<control type="label" id="0">
 			<posx>-320</posx>
-			<posy>280</posy>
+			<posy>215</posy>
 			<width>1920</width>
 			<align>center</align>
 			<aligny>top</aligny>
@@ -180,7 +180,7 @@
 		</control>
 		<control type="label" id="0">
 			<posx>-320</posx>
-			<posy>280</posy>
+			<posy>215</posy>
 			<width>1920</width>
 			<align>center</align>
 			<aligny>top</aligny>
